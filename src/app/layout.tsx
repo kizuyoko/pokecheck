@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bungee, Baloo_2 } from "next/font/google";
 import "./globals.css";
+import Header from "./components/Header";
 
 const bungee = Bungee({
   weight: "400", // Regular
@@ -28,12 +29,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en">    
       <body
         className={`${bungee.variable} ${baloo2.variable} antialiased`}
-      >
-        {children}
-      </body>
+      > 
+        <Header />
+        <main className="max-w-screen-lg mx-auto px-4">{children}</main>
+      </body> 
     </html>
   );
 }

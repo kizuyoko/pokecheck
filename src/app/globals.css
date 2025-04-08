@@ -4,7 +4,10 @@
   --background: #FFFBF4;
   --foreground: #3b3b3b;
   --font-baloo2: 'Baloo 2', Arial, Helvetica, sans-serif;
-  --font-bangee: 'Bangee', Arial, Helvetica, sans-serif;
+  --font-bungee: 'Bungee', Arial, Helvetica, sans-serif;
+  --card-background: #ffffff;
+  --red: #F5542E;
+  --blue: #1574B3;
 }
 
 @theme inline {
@@ -17,9 +20,6 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-    --card-background: #ffffff;
-    --red: ＃F5542E;
-    --blue: #1574B3;
   }
 }
 
@@ -31,13 +31,10 @@ body {
 }
 /* Logo 'POKE' */
 h1 {
-  font-family:  var(--font-bangee);
-  font-size: 3.6rem;
+  font-family:  var(--font-bungee);
   font-weight: 400;
   color: var(--red);
-  text-align: center;
-  margin: 0;
-  padding: 0;
+  text-transform: uppercase;
 }
 /* Logo 'CHECK' */
 h1 span {
@@ -61,8 +58,9 @@ input, .card {
   background: var(--card-background);
   border-radius: 0.5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  margin: 1rem;
+}
+input {
+  border: 1px solid var(--foreground);
 }
 
 
