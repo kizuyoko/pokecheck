@@ -1,20 +1,16 @@
-import Link from "next/link";
-
 interface CardProps {
   children: React.ReactNode;
   href?: string;
   className?: string;
 } 
 
-export default function Card({ children, href = "", className = "" }: CardProps) {
-  return href ? (
-    <Link href={href}>
-      <article className={`card text-left ${className}`}>
-        {children}
-      </article>
-    </Link>
-  ) : (
-    <article className={`card ${className}`}>
+const cardStyles = {
+  base: "card text-left",
+};
+
+export default function Card({ children, className = "" }: CardProps) {
+  return (
+    <article className={`w-full ${cardStyles.base} ${className}`}>
       {children}
     </article>
   ); 
