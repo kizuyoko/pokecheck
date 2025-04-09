@@ -7,7 +7,7 @@ interface LogoProps {
 export default function Logo({ className = "" }: LogoProps) {  
   return (
     <Link href="/" className="">
-      <h1 className={`text-5xl ${className}`}>
+      <h1 className={`text-4xl ${className}`}>
       Poké<span>Check</span>
       </h1>
     </Link>

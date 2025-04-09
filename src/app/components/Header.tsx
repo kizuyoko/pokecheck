@@ -2,6 +2,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
+import Logo from './ui/Logo';
 
 export default function Header() {
   const pathname = usePathname();
@@ -11,7 +12,7 @@ export default function Header() {
 
   return (
     <header className="flex items-center justify-between p-4">
-      <h1 className="font-bungee text-2xl text-[#FF6F61]">PokeCheck</h1>
+      <Logo />
       <input
         type="text"
         placeholder="Search..."

@@ -18,7 +18,7 @@ export default function Home() {
             width={96}
             height={96}
           />
-          <h2>Bulbasaur</h2>
+          <h3>Bulbasaur</h3>
           <p className="text-gray-500">#0001</p>
         </Card>
         <Card>
@@ -28,7 +28,7 @@ export default function Home() {
             width={96}
             height={96}
           />
-          <h2>Bulbasaur</h2>
+          <h3>Bulbasaur</h3>
           <p className="text-gray-500">#0001</p>
         </Card>
 
@@ -39,7 +39,7 @@ export default function Home() {
             width={96}
             height={96}
           />
-          <h2>Bulbasaur</h2>
+          <h3>Bulbasaur</h3>
           <p className="text-gray-500">#0001</p>
         </Card>
 
@@ -50,7 +50,7 @@ export default function Home() {
             width={96}
             height={96}
           />
-          <h2>Bulbasaur</h2>
+          <h3>Bulbasaur</h3>
           <p className="text-gray-500">#0001</p>
         </Card>
       </div>
