@@ -9,7 +9,7 @@ interface CardProps {
 export default function Card({ children, href = "", className = "" }: CardProps) {
   return href ? (
     <Link href={href}>
-      <article className={`card ${className}`}>
+      <article className={`card text-left ${className}`}>
         {children}
       </article>
     </Link>
