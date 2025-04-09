@@ -1,3 +1,9 @@
+import Card from "../components/ui/Card";
+
 export default function PokemonPage() {
-  return <h2>Pokémon Detail Page</h2>;
+  return (
+    <Card>
+      <h2>Pokémon Detail Page</h2>
+    </Card>
+  );
 }

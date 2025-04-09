@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bungee, Baloo_2 } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const bungee = Bungee({
   weight: "400", // Regular
@@ -31,11 +32,14 @@ export default function RootLayout({
   return (
     <html lang="en">    
       <body
-        className={`${bungee.variable} ${baloo2.variable} antialiased`}
+        className={`flex flex-col min-h-screen ${bungee.variable} ${baloo2.variable} antialiased`}
       > 
         <Header />
-        <main className="max-w-screen-lg mx-auto px-4">{children}</main>
-      </body> 
+        <main className="container mx-auto flex-grow">    
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   );
 }

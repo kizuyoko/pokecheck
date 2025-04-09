@@ -3,6 +3,7 @@
 
 import { usePathname } from 'next/navigation';
 import Logo from './ui/Logo';
+import SearchBar from './SearchBar';
 
 export default function Header() {
   const pathname = usePathname();
@@ -11,12 +12,9 @@ export default function Header() {
   if (isHome) return null;
 
   return (
-    <header className="flex items-center justify-between p-4">
+    <header className="container mx-auto flex flex-col sm:flex-row sm:justify-between py-4 items-center gap-4">
       <Logo />
-      <input
-        type="text"
-        placeholder="Search..."
-        className="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FF6F61]" />
+      <SearchBar />
     </header>
   );
 }

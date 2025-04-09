@@ -3,10 +3,12 @@ interface TitleProps {
   children: React.ReactNode;
 }
 
-export default function Title({ className = "", children }: TitleProps) {
+const Title = ({ className = "", children }: TitleProps) => {
   return (
-    <h2 className={`text-5xl ${className}`}>
+    <h2 className={className}>
       {children}
     </h2>
   );
 }
+
+export default Title;
