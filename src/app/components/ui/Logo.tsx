@@ -4,7 +4,7 @@ interface LogoProps {
   className?: string;
 }
 
-export default function Logo({ className = "" }: LogoProps) {  
+const Logo = ({ className = "" }: LogoProps) => {  
   return (
     <Link href="/" className="">
       <h1 className={`text-4xl ${className}`}>
@@ -13,3 +13,5 @@ export default function Logo({ className = "" }: LogoProps) {
     </Link>
   );
 }
+
+export default Logo;

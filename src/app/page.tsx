@@ -1,4 +1,4 @@
-import Logo from "./components/ui/Logo";
+import  Logo from "./components/ui/Logo";
 import Title from "./components/ui/Title";
 import PokemonCard from "./components/PokemonCard";
 import SearchBar from "./components/SearchBar";

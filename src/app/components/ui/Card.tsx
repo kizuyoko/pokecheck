@@ -8,10 +8,12 @@ const cardStyles = {
   base: "card text-left",
 };
 
-export default function Card({ children, className = "" }: CardProps) {
+const Card = ({ children, className = "" }: CardProps) => {
   return (
     <article className={`w-full ${cardStyles.base} ${className}`}>
       {children}
     </article>
   ); 
 }
+
+export default Card;
