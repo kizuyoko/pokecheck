@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import Card from "../../components/ui/Card";
 import Image from "next/image";
 import pokemonList from "../../data/pokemonList";
-import { FC } from "react";
 
 interface PageProps {
   params: {
@@ -10,7 +9,13 @@ interface PageProps {
   };
 }
 
-const PokemonPage: FC<PageProps> = ({ params }) => {
+export async function generateStaticParams() {
+  return pokemonList.map((p) => ({
+    name: p.name.toLowerCase(),
+  }));
+}
+
+const PokemonPage = ({ params }: PageProps) => {
   const { name } = params;
 
   // Find the Pokémon by name from the pokemonList
