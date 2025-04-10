@@ -3,11 +3,19 @@ import Card from "../../components/ui/Card";
 import Image from "next/image";
 import pokemonList from "../../data/pokemonList";
 
-interface PokemonPageProps {
-  params: { name: string };
+interface PageProps {
+  params: {
+    name: string;
+  };
 }
 
-export default function PokemonPage({ params }: PokemonPageProps) {
+export async function generateStaticParams() {
+  return pokemonList.map((p) => ({
+    name: p.name.toLowerCase(),
+  }));
+}
+
+const PokemonPage = ({ params }: PageProps) => {
   const { name } = params;
 
   // Find the Pokémon by name from the pokemonList
@@ -30,3 +38,5 @@ export default function PokemonPage({ params }: PokemonPageProps) {
     </Card>
   );
 }
+
+export default PokemonPage;
