@@ -45,6 +45,12 @@ h1 span {
   background: var(--card-background);
 }
 
+.container {
+  @media (width >= 1024px) {
+      max-width: 1024px;
+  }
+}
+
 @layer base {
   body {
     @apply px-4;
@@ -57,6 +63,9 @@ h1 span {
   }
   .input-container, .card {
     @apply shadow-lg rounded-lg p-4 border border-gray-300;
+  }
+  .container {
+    @apply max-w-7xl mx-auto md:max-w-5xl;
   }
 }
 
