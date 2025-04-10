@@ -2,8 +2,15 @@ import { notFound } from "next/navigation";
 import Card from "../../components/ui/Card";
 import Image from "next/image";
 import pokemonList from "../../data/pokemonList";
+import { FC } from "react";
 
-export default function PokemonPage({ params }: { params: { name: string } }) {
+interface PageProps {
+  params: {
+    name: string;
+  };
+}
+
+const PokemonPage: FC<PageProps> = ({ params }) => {
   const { name } = params;
 
   // Find the Pokémon by name from the pokemonList
@@ -26,3 +33,5 @@ export default function PokemonPage({ params }: { params: { name: string } }) {
     </Card>
   );
 }
+
+export default PokemonPage;
