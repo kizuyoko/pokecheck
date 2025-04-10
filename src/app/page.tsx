@@ -1,9 +1,12 @@
 import  Logo from "./components/ui/Logo";
 import Title from "./components/ui/Title";
-import PokemonCard from "./components/PokemonCard";
 import SearchBar from "./components/SearchBar";
+import PokemonList from "./components/PokemonList";
+import pokemonList from "./data/pokemonList";
 
 export default function Home() {
+  const randomPokemonList = pokemonList.sort(() => 0.5 - Math.random()).slice(0, 4);
+
   return (
     <section className="py-8 flex flex-col items-center gap-6 text-center">
       <Logo className="sm:pt-20 sm:text-8xl" />
@@ -16,10 +19,7 @@ export default function Home() {
         Featured Pokémon
       </Title>
       <div className="grid grid-cols-2 place-items-center sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
-        <PokemonCard pokemon={{ name: "Bulbasaur", id: "0001" }} />
-        <PokemonCard pokemon={{ name: "Bulbasaur", id: "0001" }} />
-        <PokemonCard pokemon={{ name: "Bulbasaur", id: "0001" }} />
-        <PokemonCard pokemon={{ name: "Bulbasaur", id: "0001" }} />
+        <PokemonList list={randomPokemonList} />
       </div>
     </section>
   );
