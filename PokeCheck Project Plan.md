@@ -28,8 +28,7 @@ PokeCheck is a Pokémon checker that allows users to search for Pokémon and che
   - [ ] Click on a Pokémon to navigate to its details page
 - [ ] **Pokémon Details Page**
   - [ ] Show Pokémon type, stats, and relevant information
-- [ ] **Navigation**
-  - [ ] Clickable recommended Pokémon on the home page leading to details pages
+
 
 ### Phase 2 (Additional Features, if time allows)
 - [ ] **Type List Page**
@@ -40,47 +39,69 @@ PokeCheck is a Pokémon checker that allows users to search for Pokémon and che
 ## API Integration
 - **Source**: [PokéAPI](https://pokeapi.co)
 - **Endpoints Used**:
-  - [ ] `/pokemon/{name or id}` - Retrieve Pokémon data
-  - [ ] `/type/{id or name}` - Retrieve type effectiveness data
+  - `/pokemon/{name or id}` - Retrieve Pokémon data
+  - `/type/{id or name}` - Retrieve type effectiveness data
 
 ## UI/UX Considerations
 - **Typography**: Bungee (logo & title), Baloo 2 (body text)
 - **Color Scheme**:
-  - Main: `#FF6F61` (Orange-Red)
-  - Accent: `#6BDAFF` (Light Blue)
-  - Background: `#FFF7E6` (Off-White)
-  - Text: `#4A4A4A` (Gray)
+  - Background: #FFFBF4 (Floral White)
+  - Card Backgorund: #ffffff (White)
+  - Text: #3b3b3b (Blach Olive)
+  - Primary Accent: #F5542E (Orange Red)
+  - Secondary Accent: #1574B3 (Check Blue)  
+
 - **Responsive Design**: Ensure usability on both desktop and mobile devices
 
 ## Development Process
-- [ ] **Setup Project Structure** (Next.js, Redux, TypeScript, Tailwind, Axios, Storybook)
-- [ ] **Implement UI Components** (Header, Search Bar, Pokémon List, Detail Page)
-- [ ] **Integrate PokéAPI**
-- [ ] **State Management with Redux**
-- [ ] **Unit Testing with Jest**
-- [ ] **Component Documentation with Storybook**
-- [ ] **Performance Optimization**
-- [ ] **Lighthouse Audit (90+ Score)**
+### Start Up
+(Branch: feature/start-up)
+- [X] **Setup Project Structure** (Next.js, Redux, TypeScript, Tailwind, Axios, Storybook)
+- [X] **Implement UI Components** (Header, Search Bar, Pokémon List, Detail Page)
+- [X] **Component Documentation with Storybook**
+### UI with Fake Data
+(Branch: feature/ui-with-fake-data)
+- [ ] Prepare **Dummy Data** for Pokémon
+- [ ] Create a **PokemonType** interface in **types/pokemon.ts**
+- [ ] Build **Type Badge Component** with dummy data
+- [ ] Show **Recommended Pokémon** on the Home page
+- [ ] Implement **Search Results List** with fake data
+- [ ] Create **Pokémon Detail Page** layout with placeholder content
+### API Integration
+(Branch: feature/api-integration)
+- [ ] **Fetch data** from **PokéAPI**
+- [ ] Implement **state management** with **Redux**
+- [ ] Connect UI to **Live API Data**
+- [ ] Display **loading states** and handle **errors**
 
-## Handling Unreliable Connection
-- [ ] Implement **Retry logic** (Up to 3 times)
-- [ ] Use **local storage** to cache Pokémon data for offline access
-- [ ] **Error message** when API fails
-- [ ] **Retry button** for re-attempt fetching
-- [ ] Show **a loading state** while fetching data
+### Testing & Optimization
+(Branch: feature/testing-optimization)
+- [ ] Write **unit tests (Jest)** for major components and logic
+- [ ] **Mock API** calls for test coverage
+- [ ] **Optimize app** for **performance** (code splitting, lazy loading)
+- [ ] Run **Lighthouse** audit and achieve 90+ score
 
-## UI and Accessibility
-- [ ] Implement **debouncing** to optimize performance
-- [ ] Add **screen reader support** for accessibility
-- [ ] Optimize layout for **mobile & touchscreen devices**
+### Offline & Error Handling
+(Branch: feature/offline-support)
+- [ ] Retry logic for failed requests (max 3 tries)
+- [ ] **Cache** Pokémon data in **local storage**
+- [ ] Display clear **error messages** on failure
+- [ ] Add **Retry** button
+- [ ] Show loading **skeleton** during fetch
 
-## Observability & Testing
-- [ ] Write **unit tests** for search filtering & API calls
-- [ ] Mock API calls in tests to avoid real network requests
-- [ ] Track **user interactions** for observability
-- [ ] Integrate **A/B testing** with Statsig
-- [ ] Browser test (Chrome, Edge, FireFox)
-- [ ] Ensure **code readability & maintainability**
+### Accessibility & UX
+(Branch: feature/accessibility)
+- [ ] Add **debouncing** to search
+- [ ] Implement **screen reader support**
+- [ ] Make layout touch-friendly and **responsive**
+
+### Analytics & Observability
+(Branch: feature/observability)
+- [ ] Track **user interactions** (e.g., search usage, click events)
+- [ ] Set up **A/B testing** with Statsig
+- [ ] **Cross-browser** testing (Chrome, Edge, Firefox)
+- [ ] Review code for readability and maintainability
+
 
 ## Deployment
 - [ ] **Platform**: Vercel
