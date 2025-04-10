@@ -3,11 +3,7 @@ import Card from "../../components/ui/Card";
 import Image from "next/image";
 import pokemonList from "../../data/pokemonList";
 
-interface PokemonPageProps {
-  params: { name: string };
-}
-
-export default function PokemonPage({ params }: PokemonPageProps) {
+export default function PokemonPage({ params }: { params: { name: string } }) {
   const { name } = params;
 
   // Find the Pokémon by name from the pokemonList
