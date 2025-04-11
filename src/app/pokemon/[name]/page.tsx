@@ -10,16 +10,16 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  // Generate static paths for all Pokémon names
-  const paths = await pokemonList.map((p) => ({ name: p.name.toLowerCase() }));
-  return paths
+  return pokemonList.map((p) => ({ name: p.name.toLowerCase() }));
 }
 
 const PokemonPage = async ({ params }: PageProps) => {
-  const { name } = await params;
+  const { name } = params;
 
   // Find the Pokémon by name from the pokemonList
-  const pokemon = pokemonList.find((p) => p.name.toLowerCase() === name.toLowerCase());
+  const pokemon = pokemonList.find(
+    (p) => p.name.toLowerCase() === name.toLowerCase()
+  );
 
   if (!pokemon) {
     notFound(); // Show a 404 page if Pokémon is not found
