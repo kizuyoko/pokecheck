@@ -10,9 +10,9 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  return pokemonList.map((p) => ({
-    name: p.name.toLowerCase(),
-  }));
+  // Generate static paths for all Pokémon names
+  const paths = await pokemonList.map((p) => ({ name: p.name.toLowerCase() }));
+  return paths
 }
 
 const PokemonPage = async ({ params }: PageProps) => {
