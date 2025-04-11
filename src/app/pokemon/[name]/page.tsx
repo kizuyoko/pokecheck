@@ -6,16 +6,15 @@ import pokemonList from "../../data/pokemonList";
 interface PageProps {
   params: {
     name: string;
-  } | Promise<{ name: string }>; 
+  }; 
 }
 
 export async function generateStaticParams() {
-  return pokemonList.map((p) => ({ name: p.name.toLowerCase() }));
+  return pokemonList.map((p) => ({ params: { name: p.name.toLowerCase() }}));
 }
 
 const PokemonPage = async ({ params }: PageProps) => {
-  const resolvedParams = await params;
-  const { name } = resolvedParams;
+  const { name } = params;
 
   // Find the Pokémon by name from the pokemonList
   const pokemon = pokemonList.find(
