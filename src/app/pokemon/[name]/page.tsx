@@ -16,7 +16,7 @@ export async function generateStaticParams() {
 }
 
 const PokemonPage = async ({ params }: PageProps) => {
-  const { name } = params;
+  const { name } = await params;
 
   // Find the Pokémon by name from the pokemonList
   const pokemon = pokemonList.find((p) => p.name.toLowerCase() === name.toLowerCase());
