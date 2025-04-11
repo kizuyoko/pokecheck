@@ -6,7 +6,7 @@ import pokemonList from "../../data/pokemonList";
 interface PageProps {
   params: {
     name: string;
-  };
+  } | Promise<{ name: string }>; 
 }
 
 export async function generateStaticParams() {
@@ -14,7 +14,8 @@ export async function generateStaticParams() {
 }
 
 const PokemonPage = async ({ params }: PageProps) => {
-  const name = params.name;
+  const resolvedParams = await params;
+  const { name } = resolvedParams;
 
   // Find the Pokémon by name from the pokemonList
   const pokemon = pokemonList.find(
