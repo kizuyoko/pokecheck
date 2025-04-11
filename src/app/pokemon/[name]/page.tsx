@@ -3,14 +3,16 @@ import Card from "../../components/ui/Card";
 import Image from "next/image";
 import pokemonList from "../../data/pokemonList";
 
+interface Params {
+  name: string;
+}
+
 interface PageProps {
-  params: {
-    name: string;
-  }; 
+  params: Params;
 }
 
 export async function generateStaticParams() {
-  return pokemonList.map((p) => ({ params: { name: p.name.toLowerCase() }}));
+  return pokemonList.map((p) => ({ name: p.name.toLowerCase() }));
 }
 
 const PokemonPage = async ({ params }: PageProps) => {
