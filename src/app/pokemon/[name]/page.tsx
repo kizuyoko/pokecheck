@@ -14,7 +14,7 @@ export async function generateStaticParams() {
 }
 
 const PokemonPage = async ({ params }: PageProps) => {
-  const { name } = params;
+  const name = params.name;
 
   // Find the Pokémon by name from the pokemonList
   const pokemon = pokemonList.find(
