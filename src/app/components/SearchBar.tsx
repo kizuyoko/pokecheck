@@ -1,4 +1,7 @@
+"use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useState, FormEvent } from "react"; 
 
 interface SearchBarProps {
   classNameContainer?: string;
@@ -14,12 +17,31 @@ export default function SearchBar({
   placeholder = "Search",
 }: SearchBarProps) {
 
+  const router = useRouter();
+  const [query, setQuery] = useState<string>("");
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setQuery(event.target.value);
+  };
+
+  const handleSubmit = (event: FormEvent) => {
+    event.preventDefault();
+    if (query.trim()) {
+      router.push(`/search/${query}`);
+    }
+  };
+
   return (
-    <form className={`input-container py-2 flex items-center gap-4 justify-between ${classNameContainer}`}>
+    <form 
+      className={`input-container py-2 flex items-center gap-4 justify-between ${classNameContainer}`}
+      onSubmit={handleSubmit}
+    >
       <input
         type="text"
         placeholder={placeholder}
         className={`input-text flex grow w-full max-w-xs focus:outline-none ${classNameText}`}
+        value={query}
+        onChange={handleInputChange}
       />
       <button type="submit" className="flex items-center">
         <Image
