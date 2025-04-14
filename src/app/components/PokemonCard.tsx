@@ -14,7 +14,7 @@ export default function PokemonCard({ pokemon }: PokemonCardProps) {
   const lowerCaseName = name.toLowerCase();
  
   return (
-    <Card href="/pokemon" className="w-full sm:w-48 lg:w-56">
+    <Card href="/pokemon" className="w-full sm:w-48 lg:w-full">
       <Link href={`/pokemon/${lowerCaseName}`} className="w-full">
         <figure className="flex justify-center w-full">
           <Image
