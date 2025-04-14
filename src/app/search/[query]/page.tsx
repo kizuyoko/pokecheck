@@ -3,11 +3,11 @@ import PokemonList from "@/app/components/PokemonList";
 import Title from "@/app/components/ui/Title";
 
 interface PageProps {
-  params: { query: string };
+  params: Promise<{ query: string }>;
 }
 
-export default function SearchResultPage({ params }: PageProps) {
-  const { query } = params;
+export default async function SearchResultPage({ params }: PageProps) {
+  const { query } = await params;
 
   const results = pokemonList.filter((p) =>
     p.name.toLowerCase().includes(query.toLowerCase())
