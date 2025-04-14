@@ -56,16 +56,31 @@ h1 span {
     @apply px-4;
   }
   h2 {
-    @apply text-4xl sm:text-5xl font-semibold
+    @apply text-3xl sm:text-5xl font-semibold
   }
   h3 {
-    @apply text-2xl font-semibold
+    @apply sm:text-2xl font-semibold
   }
   .input-container, .card {
     @apply shadow-lg rounded-lg p-4 border border-gray-300;
   }
   .container {
     @apply max-w-7xl mx-auto md:max-w-5xl;
+  }
+  .pokemon-details {
+    @apply mt-2 sm:mt-4 flex flex-col lg:flex-row justify-between gap-x-14 capitalize
+  }
+  .pokemon-details h3 {
+    @apply text-lg sm:text-xl font-normal
+  }
+  .pokemon-details span {
+    @apply inline-block w-[72px]
+  }
+  .pokemon-details strong {
+    @apply text-2xl sm:text-3xl pl-2 font-normal
+  }
+  .pokemon-property {
+    @apply mt-2
   }
 }
 
