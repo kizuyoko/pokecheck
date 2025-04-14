@@ -4,7 +4,7 @@ type Props = {
   type: string; 
 };  
 
-const typeIcon = ({ type }: Props) => {
+const TypeIcon = ({ type }: Props) => {
   return (
     <Image 
       src={`/type_icons/${type}.svg`}
@@ -16,4 +16,4 @@ const typeIcon = ({ type }: Props) => {
   );
 };
 
-export default typeIcon;
+export default TypeIcon;

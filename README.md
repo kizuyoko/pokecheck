@@ -42,6 +42,10 @@ The app will be available at `http://localhost:3000`.
 ```sh
 npm test
 ```
+### Running Storybook
+```sh
+npm run storybook
+```
 
 ## API Integration
 Data is retrieved from the [PokéAPI](https://pokeapi.co).
