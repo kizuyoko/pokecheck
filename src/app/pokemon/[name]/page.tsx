@@ -3,12 +3,8 @@ import Card from "../../components/ui/Card";
 import Image from "next/image";
 import pokemonList from "../../data/pokemonList";
 
-interface Params {
-  name: string;
-}
-
 interface PageProps {
-  params: Params;
+  params: Promise<{ name: string }>;
 }
 
 export async function generateStaticParams() {
@@ -16,7 +12,7 @@ export async function generateStaticParams() {
 }
 
 const PokemonPage = async ({ params }: PageProps) => {
-  const { name } = params;
+  const { name } = await params;
 
   // Find the Pokémon by name from the pokemonList
   const pokemon = pokemonList.find(
