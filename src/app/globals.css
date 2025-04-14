@@ -74,10 +74,10 @@ h1 span {
     @apply text-lg sm:text-xl font-normal
   }
   .pokemon-details span {
-    @apply inline-block w-[72px]
+    @apply inline-block w-[80px]
   }
   .pokemon-details strong {
-    @apply text-2xl sm:text-3xl pl-2 font-normal
+    @apply text-lg sm:text-xl pl-2 font-normal
   }
   .pokemon-property {
     @apply mt-2

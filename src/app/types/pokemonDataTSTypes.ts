@@ -1,8 +1,6 @@
 export interface PokemonDataTS {
   id: number;
   name: string;
-  url: string; 
-  imageURL: string;
   types: string[];
   abilities: string[];  
   height: number;
@@ -11,4 +9,6 @@ export interface PokemonDataTS {
     stat: string;
     value: number;
   }[];
+  gender_rate: number;
+  genera: string[];
 };

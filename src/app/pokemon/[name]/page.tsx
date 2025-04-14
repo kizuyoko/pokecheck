@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Card from "../../components/ui/Card";
 import Image from "next/image";
 import pokemonList from "../../data/pokemonList";
-import { diplayId } from "../../components/util/display";
+import { diplayId, displayGender, displayImageUrl} from "../../components/util/display";
 import TypeIcon from "../../components/ui/TypeIcon";
 
 interface PageProps {
@@ -26,12 +26,14 @@ const PokemonPage = async ({ params }: PageProps) => {
   }
 
   const idToDisplay = diplayId(pokemon.id);
+  const genderToDisplay = displayGender(pokemon.gender_rate);
+  const imageURL = displayImageUrl(pokemon.id); 
 
   return (
     <Card className="flex flex-col md:flex-row md:items-start gap-x-12">
-      <div className="flex-shrink-0">
+      <div className="items-center flex justify-center">
         <Image
-          src={pokemon.imageURL}
+          src={imageURL}
           alt={pokemon.name}
           width={343}
           height={343}
@@ -40,7 +42,6 @@ const PokemonPage = async ({ params }: PageProps) => {
       <div className="flex flex-col">
         <h2 className="sm:pt-6">{pokemon.name}</h2>
         <p className="text-gray-500">#{idToDisplay}</p>
-
         <div className="pokemon-details">
           <div>
             <div className="pokemon-property">  
@@ -68,6 +69,18 @@ const PokemonPage = async ({ params }: PageProps) => {
                 ))}
               </div>
             </div>
+            <div className="pokemon-property">
+              <h3>
+                <span>Gender: </span>
+                <strong>{genderToDisplay}</strong>
+              </h3>
+            </div>  
+            <div className="pokemon-property">
+              <h3>
+                <span>Category: </span>
+                <strong>{pokemon.genera.join(", ")}</strong>  
+              </h3>
+            </div>  
           </div>
           <div>    
             <div className="pokemon-property">
@@ -89,7 +102,7 @@ const PokemonPage = async ({ params }: PageProps) => {
               </ul>
             </div>
           </div>  
-        </div>       
+        </div>
       </div>
     </Card>
   );
