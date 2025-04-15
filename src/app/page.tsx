@@ -18,7 +18,7 @@ export default function Home() {
       <Title>
         Featured Pokémon
       </Title>
-      <div className="grid grid-cols-2 place-items-center sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+      <div className="w-full grid grid-cols-2 place-items-center sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
         <PokemonList list={randomPokemonList} />
       </div>
     </section>
