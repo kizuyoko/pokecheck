@@ -1,14 +1,14 @@
-import Card from "./ui/Card";
+import Card from "../ui/Card";
 import Image from "next/image";
 import Link from "next/link";
-import { PokemonDataTS } from "../types/pokemonDataTSTypes";
-import { diplayId, displayImageUrl } from "./util/display";
+import { PokemonDataTS } from "../../types/pokemonDataTSTypes";
+import { diplayId, displayImageUrl } from "../util/display";
 interface PokemonCardProps {
   pokemon: PokemonDataTS,
   className?: string;
 }
 
-export default function PokemonCard({ pokemon }: PokemonCardProps) {
+export default function PokemonListCard({ pokemon }: PokemonCardProps) {
   const { name, id} = pokemon;
   const idToDisplay = diplayId(id);
   const lowerCaseName = name.toLowerCase();

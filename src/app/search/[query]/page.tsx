@@ -1,5 +1,5 @@
 import pokemonList from "@/app/data/pokemonList";
-import PokemonList from "@/app/components/PokemonList";
+import PokemonList from "@/app/components/List/PokemonList";
 import Title from "@/app/components/ui/Title";
 
 interface PageProps {
