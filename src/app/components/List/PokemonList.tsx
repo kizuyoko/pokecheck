@@ -1,5 +1,5 @@
-import PokemonCard from "./PokemonCard";
-import { PokemonDataTS } from "../types/pokemonDataTSTypes";
+import PokemonListCard from "./PokemonListCard";
+import { PokemonDataTS } from "../../types/pokemonDataTSTypes";
 
 interface PokemonListProps {
   list: PokemonDataTS[];
@@ -10,7 +10,7 @@ const PokemonList = ({ list }: PokemonListProps) => {
     <>
       {
         list.map((pokemon: PokemonDataTS) => (
-          <PokemonCard 
+          <PokemonListCard 
             pokemon={pokemon}
             key={pokemon.id}
           />  

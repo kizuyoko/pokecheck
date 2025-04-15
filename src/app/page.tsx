@@ -1,7 +1,7 @@
 import  Logo from "./components/ui/Logo";
 import Title from "./components/ui/Title";
 import SearchBar from "./components/SearchBar";
-import PokemonList from "./components/PokemonList";
+import PokemonList from "./components/List/PokemonList";
 import pokemonList from "./data/pokemonList";
 
 export default function Home() {
