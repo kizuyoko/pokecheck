@@ -1,4 +1,4 @@
-import pokemonList from "@/app/data/pokemonList";
+import pokemonList from "@/data/pokemonList";
 import PokemonList from "@/app/components/List/PokemonList";
 import Title from "@/app/components/ui/Title";
 

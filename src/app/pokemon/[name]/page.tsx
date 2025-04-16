@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import pokemonList from "../../data/pokemonList";
+import pokemonList from "../../../data/pokemonList";
 import PokemonProfileCard from "@/app/components/Pokemon/PokemonProfileCard";
 
 interface PageProps {
