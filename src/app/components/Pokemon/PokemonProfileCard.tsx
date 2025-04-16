@@ -1,12 +1,12 @@
 import Card from  "../ui/Card";
-import { PokemonDataTS } from "../../types/pokemonDataTSTypes";
+import { PokemonDataTSTypes } from "../../types/pokemonDataTSTypes";
 import PokemonImageSection from "./PokemonImageSection";
 import PokemonNameSection from "./PokemonNameSection";
 import PokemonBasicInfoSection from "./PokemonBasicInfoSection";
 import PokemonStatsSection from "./PokemonStatsSection";
 
 type Props = {
-  pokemon: PokemonDataTS;
+  pokemon: PokemonDataTSTypes;
 };
 
 const PokemonProfileCard = ({ pokemon }: Props) => {

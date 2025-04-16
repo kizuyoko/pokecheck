@@ -1,4 +1,4 @@
-export interface PokemonDataTS {
+export interface PokemonDataTSTypes {
   id: number;
   name: string;
   types: string[];
