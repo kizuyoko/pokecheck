@@ -1,10 +1,10 @@
 import Card from "../ui/Card";
 import Image from "next/image";
 import Link from "next/link";
-import { PokemonDataTSTypes } from "../../types/pokemonDataTSTypes";
+import type { Pokemon } from "../../../types/pokemon";
 import { diplayId, displayImageUrl } from "../util/display";
 interface PokemonCardProps {
-  pokemon: PokemonDataTSTypes,
+  pokemon: Pokemon,
   className?: string;
 }
 

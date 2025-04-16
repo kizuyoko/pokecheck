@@ -1,15 +1,15 @@
 import PokemonListCard from "./PokemonListCard";
-import { PokemonDataTS } from "../../types/pokemonDataTSTypes";
+import type { Pokemon } from "../../../types/pokemon";
 
 interface PokemonListProps {
-  list: PokemonDataTS[];
+  list: Pokemon[];
 }
 
 const PokemonList = ({ list }: PokemonListProps) => {
   return (
     <>
       {
-        list.map((pokemon: PokemonDataTS) => (
+        list.map((pokemon: Pokemon) => (
           <PokemonListCard 
             pokemon={pokemon}
             key={pokemon.id}

@@ -2,7 +2,7 @@ import  Logo from "./components/ui/Logo";
 import Title from "./components/ui/Title";
 import SearchBar from "./components/SearchBar";
 import PokemonList from "./components/List/PokemonList";
-import pokemonList from "./data/pokemonList";
+import pokemonList from "../data/pokemonList";
 
 export default function Home() {
   const randomPokemonList = pokemonList.sort(() => 0.5 - Math.random()).slice(0, 4);

@@ -1,6 +1,6 @@
 import PokemonListCard from "./PokemonListCard";
 import { Meta, StoryObj } from "@storybook/react";
-import pokemonList from "@/app/data/pokemonList";
+import pokemonList from "@/data/pokemonList";
 
 const pokemon = pokemonList[0]; 
 
