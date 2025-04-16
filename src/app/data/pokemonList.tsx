@@ -1,4 +1,4 @@
-import type { PokemonDataTS } from "../types/pokemonDataTSTypes";
+import type { PokemonDataTSTypes } from "../types/pokemonDataTSTypes";
 
 const pokemonList = [
   {
@@ -165,7 +165,7 @@ const pokemonList = [
     genera: ["water"],
   },
 
-] as PokemonDataTS[];
+] as PokemonDataTSTypes[];
 
 
 export default pokemonList;
