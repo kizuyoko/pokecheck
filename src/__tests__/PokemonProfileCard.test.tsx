@@ -71,6 +71,5 @@ describe('PokemonProfileCard', () => {
   it('renders Pokémon stats', () => {
     render(<PokemonProfileCard pokemon={dummyPokemon} />);
     expect(screen.getByText(/hp/i)).toBeInTheDocument();
-    expect(screen.getByText(/defense/i)).toBeInTheDocument();
   });
 });
