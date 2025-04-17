@@ -10,12 +10,15 @@ const PokemonImageSection = ({ id, name }: Props) => {
   const imageURL = displayImageUrl(id);
 
   return (
-    <Image 
-      src={imageURL} 
-      alt={name} 
-      width={343} 
-      height={343} 
-    />
+    <figure>
+      <Image 
+        src={imageURL} 
+        alt={name} 
+        width={343} 
+        height={343} 
+      />
+      <figcaption className="sr-only">{name}</figcaption>
+    </figure>
   );
 };
 
