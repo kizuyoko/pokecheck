@@ -16,7 +16,7 @@ PokeCheck is a Pokémon checker that allows users to search for Pokémon and che
 
 ## Features
 ### Phase 1 (Core Features)
-- [ ] **Preparation**
+- [X] **Preparation**
   - [X] Planning
   - [X] Wireframe by Figma
 - [ ] **Home Page**
@@ -61,12 +61,12 @@ PokeCheck is a Pokémon checker that allows users to search for Pokémon and che
 - [X] **Component Documentation with Storybook**
 ### UI with Fake Data
 (Branch: feature/ui-with-fake-data)
-- [ ] Prepare **Dummy Data** for Pokémon
-- [ ] Create a **PokemonType** interface in **types/pokemon.ts**
-- [ ] Build **Type Badge Component** with dummy data
-- [ ] Show **Recommended Pokémon** on the Home page
-- [ ] Implement **Search Results List** with fake data
-- [ ] Create **Pokémon Detail Page** layout with placeholder content
+- [X] Prepare **Dummy Data** for Pokémon
+- [X] Create a **PokemonType** interface in **types/pokemon.ts**
+- [X] Build **Type Badge Component** with dummy data
+- [X] Show **Recommended Pokémon** on the Home page
+- [X] Implement **Search Results List** with fake data
+- [X] Create **Pokémon Detail Page** layout with placeholder content
 ### API Integration
 (Branch: feature/api-integration)
 - [ ] **Fetch data** from **PokéAPI**

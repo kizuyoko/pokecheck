@@ -25,8 +25,10 @@ export default function PokemonListCard({ pokemon }: PokemonCardProps) {
             height={120}
           />
         </figure>
-        <h3>{name}</h3>
-        <p className="text-gray-500">#{idToDisplay}</p>
+        <figcaption>
+          <h3>{name}</h3>
+          <p className="text-gray-500">#{idToDisplay}</p>
+        </figcaption>  
       </Link>
     </Card>
   );
