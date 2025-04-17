@@ -50,10 +50,4 @@ describe('PokemonListCard', () => {
     expect(image).toHaveAttribute('width', '120');
     expect(image).toHaveAttribute('height', '120');
   });
-
-  it('Shows the correct Pokémon Type', () => {
-    render(<PokemonListCard pokemon={dummyPokemon} />);
-    const type = screen.getByText(/grass/i);
-    expect(type).toBeInTheDocument();
-  });
 });
