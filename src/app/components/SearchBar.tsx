@@ -35,6 +35,7 @@ export default function SearchBar({
     <form 
       className={`input-container py-2 flex items-center gap-4 justify-between ${classNameContainer}`}
       onSubmit={handleSubmit}
+      role="form"
     >
       <input
         type="text"
