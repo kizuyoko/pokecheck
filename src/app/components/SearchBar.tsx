@@ -33,14 +33,14 @@ export default function SearchBar({
 
   return (
     <form 
-      className={`input-container py-2 flex items-center gap-4 justify-between ${classNameContainer}`}
+      className={`input-container py-2 flex items-center gap-2 justify-between ${classNameContainer}`}
       onSubmit={handleSubmit}
       role="form"
     >
       <input
         type="text"
         placeholder={placeholder}
-        className={`input-text flex grow w-full max-w-xs focus:outline-none ${classNameText}`}
+        className={`input-text flex grow w-full  focus:outline-none ${classNameText}`}
         value={query}
         onChange={handleInputChange}
       />
