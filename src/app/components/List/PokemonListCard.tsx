@@ -13,6 +13,7 @@ export default function PokemonListCard({ pokemon }: PokemonCardProps) {
   const idToDisplay = diplayId(id);
   const lowerCaseName = name.toLowerCase();
   const imageURL = displayImageUrl(id);
+  const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
  
   return (
     <Card href="/pokemon" className="w-full">
@@ -26,7 +27,7 @@ export default function PokemonListCard({ pokemon }: PokemonCardProps) {
           />
         </figure>
         <figcaption>
-          <h3>{name}</h3>
+          <h3>{capitalizedName}</h3>
           <p className="text-gray-500">#{idToDisplay}</p>
         </figcaption>  
       </Link>
