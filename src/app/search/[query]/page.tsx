@@ -26,7 +26,7 @@ export default async function SearchResultPage({ params }: PageProps) {
     </section>
   );
 }
-
+/*
 import { Metadata } from "next";
 export async function generateMetadata(
   props: { params: { query: string } }
@@ -40,4 +40,4 @@ export async function generateMetadata(
   };
 }
 
-
+*/

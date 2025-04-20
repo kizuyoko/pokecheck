@@ -4,15 +4,15 @@ import PokemonProfileCard from "@/app/components/Pokemon/PokemonProfileCard";
 import SkeltonPokemonProfileCard from "@/app/components/skelton/SkeltonPokemonProfileCard";
 
 interface PageProps {
-  params: Promise<{ name: string }>;
+  params: { name: string }; 
 }
 
 export async function generateStaticParams() {
   return pokemonList.map((p) => ({ name: p.name.toLowerCase() }));
 }
 
-const PokemonPage = async ({ params }: PageProps) => {
-  const { name } = await params;
+const PokemonPage = ({ params }: PageProps) => {
+  const { name } = params;
   const isLoading = false; // Simulate loading state
 
   // Find the Pokémon by name from the pokemonList
@@ -36,13 +36,13 @@ const PokemonPage = async ({ params }: PageProps) => {
 }
 
 export default PokemonPage;
-
+/*
 import { Metadata } from "next";
 
 export async function generateMetadata(
-  props: { params: { name: string } }
+  props: { params: Promise<{ name: string }>}
 ): Promise<Metadata> {
-  const rawName = props.params.name;
+  const { name: rawName } = await props.params;
   const name = decodeURIComponent(rawName)
     .toLowerCase()
     .replace(/^\w/, (c) => c.toUpperCase());
@@ -52,3 +52,4 @@ export async function generateMetadata(
     description: `Pokémon ${name} information`,
   };
 }
+  */
