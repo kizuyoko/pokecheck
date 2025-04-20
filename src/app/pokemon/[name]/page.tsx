@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import pokemonList from "../../../data/pokemonList";
 import PokemonProfileCard from "@/app/components/Pokemon/PokemonProfileCard";
+import SkeltonPokemonProfileCard from "@/app/components/skelton/SkeltonPokemonProfileCard";
 
 interface PageProps {
   params: Promise<{ name: string }>;
@@ -12,6 +13,7 @@ export async function generateStaticParams() {
 
 const PokemonPage = async ({ params }: PageProps) => {
   const { name } = await params;
+  const isLoading = true; // Simulate loading state
 
   // Find the Pokémon by name from the pokemonList
   const pokemon = pokemonList.find(
@@ -23,7 +25,13 @@ const PokemonPage = async ({ params }: PageProps) => {
   }
 
   return (
-    <PokemonProfileCard pokemon={pokemon} />
+    <>
+      {isLoading ? (
+        <SkeltonPokemonProfileCard />
+      ) : (
+        <PokemonProfileCard pokemon={pokemon} />
+      )}
+    </>
   );
 }
 

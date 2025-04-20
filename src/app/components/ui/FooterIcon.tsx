@@ -9,7 +9,13 @@ interface FooterIconProps {
 const FooterIcon = ({ href, src, alt }: FooterIconProps) => {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer">
-      <Image src={src} alt={alt} width={24} height={24} />
+      <Image 
+        src={src} 
+        alt={alt} 
+        width={24} 
+        height={24} 
+        className="dark:filter dark:invert"
+      />
     </a>
   );
 }

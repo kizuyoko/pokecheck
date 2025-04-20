@@ -3,18 +3,25 @@ import Title from "./components/ui/Title";
 import SearchBar from "./components/SearchBar";
 import PokemonList from "./components/List/PokemonList";
 import pokemonList from "../data/pokemonList";
+import SkeltonSearchBar from "./components/skelton/SkeltonSearchBar";
 
 export default function Home() {
+  const isLoading = false;
   const randomPokemonList = pokemonList.sort(() => 0.5 - Math.random()).slice(0, 4);
 
   return (
     <section className="py-8 flex flex-col items-center gap-6 text-center">
       <Logo className="sm:pt-20 sm:text-8xl" />
-      <SearchBar 
-        classNameContainer="sm:w-lg sm:mt-4 sm:mb-8"
-        classNameText="sm:text-2xl"
-        classNameIcon="sm:h-8 sm:w-8"
-      />
+      {isLoading ? (
+        <SkeltonSearchBar 
+          classNameContainer="sm:w-lg sm:mt-4 sm:mb-8"
+        />
+      ) : (
+        <SearchBar 
+          classNameContainer="sm:w-lg sm:mt-4 sm:mb-8"
+          classNameText="sm:text-2xl"
+        />
+      )}
       <Title>
         Featured Pokémon
       </Title>

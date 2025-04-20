@@ -19,8 +19,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #222222;
     --foreground: #ededed;
+    --card-background: #555555;
   }
 }
 
@@ -81,6 +82,9 @@ h1 span {
   }
   .pokemon-property {
     @apply mt-2
+  }
+  .skelton {
+    @apply animate-pulse bg-gray-300 rounded-md
   }
 }
 
