@@ -26,3 +26,15 @@ export default async function SearchResultPage({ params }: PageProps) {
     </section>
   );
 }
+
+import { Metadata } from "next";
+export async function generateMetadata({ params }: { params: { query: string } }): Promise<Metadata> {
+  const query = decodeURIComponent(params.query);
+
+  return {
+    title: `Pokémon ${query}`,
+    description: `Pokémon ${query} information`,
+  };
+}
+
+

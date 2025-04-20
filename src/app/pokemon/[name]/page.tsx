@@ -36,3 +36,15 @@ const PokemonPage = async ({ params }: PageProps) => {
 }
 
 export default PokemonPage;
+
+import { Metadata } from "next";
+export async function generateMetadata({ params }: { params: { name: string } }): Promise<Metadata> {
+  const name = decodeURIComponent(params.name)
+    .toLowerCase()
+    .replace(/^\w/, (c) => c.toUpperCase());
+
+  return {
+    title: `Pokémon ${name}`,
+    description: `Pokémon ${name} information`,
+  };
+}
