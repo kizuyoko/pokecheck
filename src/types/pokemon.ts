@@ -1,7 +1,7 @@
 export interface Pokemon {
   id: number;
   name: string;
-  types: string[];
+  types: PokemonType[];
   abilities: string[];  
   height: number;
   weight: number;
@@ -12,3 +12,24 @@ export interface Pokemon {
   gender_rate: number;
   genera: string[];
 };
+
+export type PokemonType = 
+  "normal" |
+  "fighting" |      
+  "flying" |
+  "poison" |        
+  "ground" |
+  "rock" |
+  "bug" |
+  "ghost" |
+  "steel" |
+  "fire" |
+  "water" |
+  "grass" |
+  "electric" |
+  "psychic" |
+  "ice" |
+  "dragon" |
+  "dark" |
+  "fairy";
+
