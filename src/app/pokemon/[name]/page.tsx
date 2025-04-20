@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 
 const PokemonPage = async ({ params }: PageProps) => {
   const { name } = await params;
-  const isLoading = true; // Simulate loading state
+  const isLoading = false; // Simulate loading state
 
   // Find the Pokémon by name from the pokemonList
   const pokemon = pokemonList.find(
