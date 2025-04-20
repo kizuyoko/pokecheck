@@ -26,12 +26,10 @@ export default async function SearchResultPage({ params }: PageProps) {
     </section>
   );
 }
-/*
+
 import { Metadata } from "next";
-export async function generateMetadata(
-  props: { params: { query: string } }
-): Promise<Metadata> {
-  const rawQuery = props.params.query;
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const {query: rawQuery } = await params;
   const query = decodeURIComponent(rawQuery)
 
   return {
@@ -40,4 +38,3 @@ export async function generateMetadata(
   };
 }
 
-*/
