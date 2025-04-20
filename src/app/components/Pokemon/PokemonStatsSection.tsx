@@ -13,7 +13,12 @@ const PokemonStatsSection = ({ abilities, stats }: Props) => {
         <h3>Abilities:</h3>
         <ul className="list-disc list-inside">
           {abilities.map((ability) => (
-            <li key={ability}>{ability}</li>
+            <li 
+              key={ability}
+              className="pl-2"
+            >
+              {ability}
+            </li>
           ))}
         </ul>
       </div>
@@ -21,7 +26,10 @@ const PokemonStatsSection = ({ abilities, stats }: Props) => {
         <h3>Stats</h3>
         <ul className="list-disc list-inside">
           {stats.map((stat) => (
-            <li key={stat.stat}>
+            <li 
+              key={stat.stat}
+              className="pl-2"
+            >
               {stat.stat}: {stat.value}
             </li>
           ))}
