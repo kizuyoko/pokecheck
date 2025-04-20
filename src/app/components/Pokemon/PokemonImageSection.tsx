@@ -16,6 +16,7 @@ const PokemonImageSection = ({ id, name }: Props) => {
         alt={name} 
         width={343} 
         height={343} 
+        priority={true}
       />
       <figcaption className="sr-only">{name}</figcaption>
     </figure>

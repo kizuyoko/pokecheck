@@ -11,7 +11,7 @@ const PokemonList = ({ list }: PokemonListProps) => {
   return (
     <>
       {
-        list.map((pokemon: Pokemon) => (
+        list.map((pokemon: Pokemon, index: number) => (
           isLoading ? (
             <SkeltonPokemonListCard
               key={pokemon.id}
@@ -20,6 +20,7 @@ const PokemonList = ({ list }: PokemonListProps) => {
             <PokemonListCard 
               pokemon={pokemon}
               key={pokemon.id}
+              isPriority={index === 0}
             /> 
           )
         ))
