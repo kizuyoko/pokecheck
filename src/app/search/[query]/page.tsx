@@ -28,8 +28,11 @@ export default async function SearchResultPage({ params }: PageProps) {
 }
 
 import { Metadata } from "next";
-export async function generateMetadata({ params }: { params: { query: string } }): Promise<Metadata> {
-  const query = decodeURIComponent(params.query);
+export async function generateMetadata(
+  props: { params: { query: string } }
+): Promise<Metadata> {
+  const rawQuery = props.params.query;
+  const query = decodeURIComponent(rawQuery)
 
   return {
     title: `Pokémon ${query}`,
