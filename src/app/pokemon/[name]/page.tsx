@@ -4,15 +4,15 @@ import PokemonProfileCard from "@/app/components/Pokemon/PokemonProfileCard";
 import SkeltonPokemonProfileCard from "@/app/components/skelton/SkeltonPokemonProfileCard";
 
 interface PageProps {
-  params: { name: string }; 
+  params: Promise<{ name: string }>;
 }
 
 export async function generateStaticParams() {
   return pokemonList.map((p) => ({ name: p.name.toLowerCase() }));
 }
 
-const PokemonPage = ({ params }: PageProps) => {
-  const { name } = params;
+const PokemonPage = async ({ params }: PageProps) => {
+  const { name } = await params;
   const isLoading = false; // Simulate loading state
 
   // Find the Pokémon by name from the pokemonList
