@@ -5,10 +5,10 @@ import type { Pokemon } from "../../../types/pokemon";
 import { diplayId, displayImageUrl } from "../util/display";
 interface PokemonCardProps {
   pokemon: Pokemon,
-  className?: string;
+  isPriority?: boolean;
 }
 
-export default function PokemonListCard({ pokemon }: PokemonCardProps) {
+export default function PokemonListCard({ pokemon, isPriority }: PokemonCardProps) {
   const { name, id} = pokemon;
   const idToDisplay = diplayId(id);
   const lowerCaseName = name.toLowerCase();
@@ -24,6 +24,7 @@ export default function PokemonListCard({ pokemon }: PokemonCardProps) {
             alt={name}
             width={120}
             height={120}
+            priority={isPriority}
           />
         </figure>
         <figcaption>
