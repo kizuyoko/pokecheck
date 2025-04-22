@@ -32,7 +32,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 const PokemonPage = async ({ params }: PageProps) => {
   const { name } = await params;
-
+// await params is used because of temporary promise in the function signature. If you use the above code, you can just use params.name directly.
+  // const { name } = params; // If you use the above code, you can just use params.name directly.
   if (!name) notFound();
 
   return (
