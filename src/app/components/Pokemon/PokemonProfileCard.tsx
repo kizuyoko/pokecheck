@@ -2,8 +2,8 @@ import Card from  "../ui/Card";
 import type { Pokemon } from "../../../types/pokemon";
 import PokemonImageSection from "./PokemonImageSection";
 import PokemonNameSection from "./PokemonNameSection";
-import PokemonBasicInfoSection from "./PokemonBasicInfoSection";
-import PokemonStatsSection from "./PokemonStatsSection";
+//import PokemonBasicInfoSection from "./PokemonBasicInfoSection";
+//import PokemonStatsSection from "./PokemonStatsSection";
 
 type Props = {
   pokemon: Pokemon;
@@ -23,7 +23,7 @@ const PokemonProfileCard = ({ pokemon }: Props) => {
           name={pokemon.name}
           id={pokemon.id}
         />
-        <div className="pokemon-details">
+        {/* <div className="pokemon-details">
           <PokemonBasicInfoSection 
             height={pokemon.height}
             weight={pokemon.weight}
@@ -35,7 +35,7 @@ const PokemonProfileCard = ({ pokemon }: Props) => {
             abilities={pokemon.abilities}
             stats={pokemon.stats}
           />
-        </div>
+        </div> */}
       </div>
     </Card>
   );
