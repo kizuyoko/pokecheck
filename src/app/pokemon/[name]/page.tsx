@@ -30,8 +30,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-const PokemonPage = ({ params }: { params: { name: string } }) => {
-  const { name } = params;
+const PokemonPage = async ({ params }: PageProps) => {
+  const { name } = await params;
 
   if (!name) notFound();
 
