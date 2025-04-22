@@ -26,6 +26,7 @@ const PokemonBasicInfoSection = ({ height, weight, types, gender_rate, genera }:
           <strong>{(weight / 10).toFixed(1)} kg</strong>
         </h3>
       </div>
+      
       <div className="pokemon-property flex">
         <h3 className="pr-2">
           <span>Types: </span>
