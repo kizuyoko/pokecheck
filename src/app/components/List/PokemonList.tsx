@@ -1,9 +1,9 @@
 import PokemonListCard from "./PokemonListCard";
-import type { Pokemon } from "../../../types/pokemon";
+import type { PokemonSimpleData } from "@/types/pokemon";
 import SkeltonPokemonListCard from "../skelton/SkeltonPokemonListCard";
 
 interface PokemonListProps {
-  list: Pokemon[];
+  list: PokemonSimpleData[];
 }
 
 const PokemonList = ({ list }: PokemonListProps) => {
@@ -11,7 +11,7 @@ const PokemonList = ({ list }: PokemonListProps) => {
   return (
     <>
       {
-        list.map((pokemon: Pokemon, index: number) => (
+        list.map((pokemon: PokemonSimpleData, index: number) => (
           isLoading ? (
             <SkeltonPokemonListCard
               key={pokemon.id}

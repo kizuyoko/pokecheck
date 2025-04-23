@@ -1,10 +1,10 @@
 import Card from "../ui/Card";
 import Image from "next/image";
 import Link from "next/link";
-import type { Pokemon } from "../../../types/pokemon";
+import type { PokemonSimpleData } from "../../../types/pokemon";
 import { diplayId, displayImageUrl } from "../util/display";
 interface PokemonCardProps {
-  pokemon: Pokemon,
+  pokemon: PokemonSimpleData,
   isPriority?: boolean;
 }
 
