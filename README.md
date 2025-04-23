@@ -11,11 +11,10 @@ PokeCheck is a Pokémon matchup checker that allows users to search for Pokémon
 ## Tech Stack
 - **WireFrame**: [Figma](https://www.figma.com/design/6vT6cOZT5kekdrCWPMHMnK/PokeCheck?node-id=0-1&t=PuoJ8J6K6oqqGOL6-1)
 - **Deployment**: [Vercel](https://pokecheck-two.vercel.app/)
-- **Framework**: React (Next.js)
-- **State Management**: Redux
+- **Framework**: React, Next.js
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
-- **API Requests**: Axios
+- **API Requests**: Axios, TanStack Query
 - **Component Documentation**: Storybook
 - **Testing**: Jest (unit testing)
 

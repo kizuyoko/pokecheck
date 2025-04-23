@@ -16,7 +16,7 @@ export default function PokemonListCard({ pokemon, isPriority }: PokemonCardProp
   const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
  
   return (
-    <Card href="/pokemon" className="w-full">
+    <Card href="/pokemon" className="w-full h-full">
       <Link href={`/pokemon/${lowerCaseName}`} className="w-full">
         <figure className="flex justify-center w-full">
           <Image

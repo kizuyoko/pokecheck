@@ -8,7 +8,7 @@ PokeCheck is a Pokémon checker that allows users to search for Pokémon and che
 - **State Management**: Redux
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
-- **Data Fetching**: Axios
+- **Data Fetching**: TanStack Query, Axios
 - **Component Library & Documentation**: Storybook
 - **Testing**: Jest (unit testing)
 - **Version Control**: GitHub (Feature-based branching strategy)
@@ -19,15 +19,15 @@ PokeCheck is a Pokémon checker that allows users to search for Pokémon and che
 - [X] **Preparation**
   - [X] Planning
   - [X] Wireframe by Figma
-- [ ] **Home Page**
-  - [ ] Title and search form
-  - [ ] Display random recommended Pokémon
-- [ ] **Search Page**
-  - [ ] Users can search for Pokémon by name
-  - [ ] Display search results as a list of images and names
-  - [ ] Click on a Pokémon to navigate to its details page
-- [ ] **Pokémon Details Page**
-  - [ ] Show Pokémon type, stats, and relevant information
+- [X] **Home Page**
+  - [X] Title and search form
+  - [X] Display random recommended Pokémon
+- [X] **Search Page**
+  - [X] Users can search for Pokémon by name
+  - [X] Display search results as a list of images and names
+  - [X] Click on a Pokémon to navigate to its details page
+- [X] **Pokémon Details Page**
+  - [X] Show Pokémon type, stats, and relevant information
 
 
 ### Phase 2 (Additional Features, if time allows)
@@ -39,7 +39,7 @@ PokeCheck is a Pokémon checker that allows users to search for Pokémon and che
 ## API Integration
 - **Source**: [PokéAPI](https://pokeapi.co)
 - **Endpoints Used**:
-  - `/pokemon/{name or id}` - Retrieve Pokémon data
+  - `/pokemon/{name}` - Retrieve Pokémon data
   - `/type/{id or name}` - Retrieve type effectiveness data
 
 ## UI/UX Considerations
@@ -69,9 +69,9 @@ PokeCheck is a Pokémon checker that allows users to search for Pokémon and che
 - [X] Create **Pokémon Detail Page** layout with placeholder content
 ### API Integration
 (Branch: feature/api-integration)
-- [ ] **Fetch data** from **PokéAPI**
+- [X] **Fetch data** from **PokéAPI**
 - [ ] Implement **state management** with **Redux**
-- [ ] Connect UI to **Live API Data**
+- [X] Connect UI to **Live API Data**
 - [ ] Display **loading states** and handle **errors**
 
 ### Testing & Optimization
@@ -104,8 +104,8 @@ PokeCheck is a Pokémon checker that allows users to search for Pokémon and che
 
 
 ## Deployment
-- [ ] **Platform**: Vercel
-- [ ] **Version Control**: GitHub (Feature-based branching strategy)
+- [X] **Platform**: Vercel
+- [X] **Version Control**: GitHub (Feature-based branching strategy)
 
 ## Future Work
 - [ ] Evolution Checker feature
