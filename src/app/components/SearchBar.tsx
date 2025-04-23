@@ -38,11 +38,16 @@ export default function SearchBar({
       <input
         type="text"
         placeholder={placeholder}
-        className={`input-text flex grow w-full  focus:outline-none ${classNameText}`}
+        className={`input-text flex grow w-full focus:outline-none ${classNameText}`}
         value={query}
         onChange={handleInputChange}
       />
-      <button type="submit" className="flex items-center text-2xl">🔍</button>
+      <button 
+        type="submit" 
+        className="flex items-center text-2xl hover:scale-110 transition-transform"
+      >
+        🔍
+      </button>
     </form>
   );
 }
