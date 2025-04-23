@@ -1,4 +1,5 @@
-import pokemonList from "@/data/pokemonList";
+//import pokemonList from "@/data/pokemonList";
+import { pokemonNameID100 } from "@/data/pokemonNameID100";
 import PokemonList from "@/app/components/List/PokemonList";
 import Title from "@/app/components/ui/Title";
 
@@ -16,7 +17,7 @@ interface PageProps {
 export default async function SearchResultPage({ params }: PageProps) {
   const { query } = await params; //await params is used because of temporary promise in the function signature. If you use the above code, you can just use params.name directly.
 
-  const results = pokemonList.filter((p) =>
+  const results = pokemonNameID100.filter((p) =>
     p.name.toLowerCase().includes(query.toLowerCase())
   );
 
