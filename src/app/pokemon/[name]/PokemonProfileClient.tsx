@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { fetchPokemonByName } from '@/lib/api';
 import PokemonProfileCard from '@/app/components/Pokemon/PokemonProfileCard';
 import SkeltonPokemonProfileCard from '@/app/components/skelton/SkeltonPokemonProfileCard';
+import NotFound from '@/app/components/NotFound';
 
 const PokemonProfileClient = ({ name }: { name: string }) => {
   const { data, error, isLoading } = useQuery({
@@ -13,8 +14,7 @@ const PokemonProfileClient = ({ name }: { name: string }) => {
   });
 
   if (isLoading) return <SkeltonPokemonProfileCard />;
-  if (error) return <p>データの取得に失敗しました😢</p>;
-  if (!data) return <p>ポケモンが見つかりませんでした</p>;
+  if (error || !data) return <NotFound type='pokemon' />;
 
   return <PokemonProfileCard pokemon={data} />;
 };
