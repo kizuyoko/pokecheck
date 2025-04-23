@@ -2,12 +2,13 @@ import  Logo from "./components/ui/Logo";
 import Title from "./components/ui/Title";
 import SearchBar from "./components/SearchBar";
 import PokemonList from "./components/List/PokemonList";
-import pokemonList from "../data/pokemonList";
+import { pokemonNameID100 } from "@/data/pokemonNameID100";
+import { getRandomPokemons } from "./components/util/display";
 import SkeltonSearchBar from "./components/skelton/SkeltonSearchBar";
 
 export default function Home() {
   const isLoading = false;
-  const randomPokemonList = pokemonList.sort(() => 0.5 - Math.random()).slice(0, 4);
+  const randomPokemonList = getRandomPokemons(4, pokemonNameID100);
 
   return (
     <section className="py-8 flex flex-col items-center gap-6 text-center">

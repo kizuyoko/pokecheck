@@ -13,6 +13,11 @@ export interface Pokemon {
   genera: string[];
 };
 
+export interface PokemonSimpleData {
+  id: number;
+  name: string;
+};
+
 export type PokemonType = 
   "normal" |
   "fighting" |      
