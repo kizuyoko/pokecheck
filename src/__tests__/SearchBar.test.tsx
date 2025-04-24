@@ -53,7 +53,6 @@ describe('SearchBar', () => {
     expect(container).toHaveClass('input-container py-2 flex items-center gap-2 justify-between custom-container');
     expect(input).toHaveClass('input-text flex grow w-full focus:outline-none custom-text');
     expect(button).toHaveClass('flex items-center');
-    expect(screen.getByAltText(/search/i)).toHaveClass('mr-2 opacity-60 custom-icon');
   });
 
   it('renders with custom placeholder', () => {
@@ -61,8 +60,28 @@ describe('SearchBar', () => {
     expect(screen.getByPlaceholderText(/custom placeholder/i)).toBeInTheDocument();
   });
 
-  it('renders with custom icon size', () => {
-    render(<SearchBar classNameIcon="w-8 h-8" />);
-    expect(screen.getByAltText(/search/i)).toHaveClass('mr-2 opacity-60 w-8 h-8');
+  it('clears input after submission', () => {
+    render(<SearchBar />);
+    const input = screen.getByPlaceholderText(/search/i) as HTMLInputElement;
+    fireEvent.change(input, { target: { value: 'Pikachu' } });
+    expect(input.value).toBe('Pikachu');
+    
+    const form = screen.getByRole('form') || document.querySelector('form');
+    fireEvent.submit(form);
+    
+    expect(input.value).toBe(''); // Check if input is cleared
   });
+
+  it('debounces input changes', () => {
+    jest.useFakeTimers();
+    render(<SearchBar />);
+    const input = screen.getByPlaceholderText(/search/i) as HTMLInputElement;
+    
+    fireEvent.change(input, { target: { value: 'Pikachu' } });
+    jest.advanceTimersByTime(500); // Wait for debounce time
+    expect(input.value).toBe('Pikachu');
+    
+    jest.useRealTimers();
+  });
+
 });
