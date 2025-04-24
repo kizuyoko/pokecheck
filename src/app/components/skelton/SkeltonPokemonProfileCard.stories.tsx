@@ -7,9 +7,7 @@ const meta: Meta<typeof SkeltonPokemonProfileCard> = {
   tags: ['autodocs'], 
   decorators: [
     (Story) => (
-      <div className="flex justify-center items-center h-screen">
-        {Story()}
-      </div>
+      <Story />
     ),
   ],
 };

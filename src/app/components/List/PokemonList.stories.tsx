@@ -8,9 +8,9 @@ const meta: Meta<typeof PokemonList> = {
   tags: ["autodocs"],
   decorators: [
     (Story) => (
-      <div className="grid grid-cols-2 place-items-center sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+      <>
         {Story()}
-      </div>
+      </>
     ),
   ],
 };

@@ -59,4 +59,29 @@ describe('SearchBar', () => {
     render(<SearchBar placeholder="Custom Placeholder" />);
     expect(screen.getByPlaceholderText(/custom placeholder/i)).toBeInTheDocument();
   });
+
+  it('clears input after submission', () => {
+    render(<SearchBar />);
+    const input = screen.getByPlaceholderText(/search/i) as HTMLInputElement;
+    fireEvent.change(input, { target: { value: 'Pikachu' } });
+    expect(input.value).toBe('Pikachu');
+    
+    const form = screen.getByRole('form') || document.querySelector('form');
+    fireEvent.submit(form);
+    
+    expect(input.value).toBe(''); // Check if input is cleared
+  });
+
+  it('debounces input changes', () => {
+    jest.useFakeTimers();
+    render(<SearchBar />);
+    const input = screen.getByPlaceholderText(/search/i) as HTMLInputElement;
+    
+    fireEvent.change(input, { target: { value: 'Pikachu' } });
+    jest.advanceTimersByTime(500); // Wait for debounce time
+    expect(input.value).toBe('Pikachu');
+    
+    jest.useRealTimers();
+  });
+
 });

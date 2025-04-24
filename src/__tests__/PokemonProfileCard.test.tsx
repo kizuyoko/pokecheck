@@ -72,4 +72,10 @@ describe('PokemonProfileCard', () => {
     render(<PokemonProfileCard pokemon={dummyPokemon} />);
     expect(screen.getByText(/hp/i)).toBeInTheDocument();
   });
+
+  it('matches the snapshot', () => {
+    const { asFragment } = render(<PokemonProfileCard pokemon={dummyPokemon} />);
+    expect(asFragment()).toMatchSnapshot();
+  }); 
+
 });
