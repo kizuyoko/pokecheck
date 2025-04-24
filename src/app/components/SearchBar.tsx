@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { useState, FormEvent } from "react"; 
+import { useState, FormEvent, useEffect } from "react"; 
 
 interface SearchBarProps {
   classNameContainer?: string;
@@ -9,14 +9,32 @@ interface SearchBarProps {
   placeholder?: string;
 }
 
+let debounceTimer: NodeJS.Timeout | null = null;
+const debouseDelay = 500; // Adjust the debounce delay as needed
+
 export default function SearchBar({
   classNameContainer = "",
   classNameText = "text-lg",
   placeholder = "Search",
 }: SearchBarProps) {
-
   const router = useRouter();
   const [query, setQuery] = useState<string>("");
+  const [debouncedQuery, setDebouncedQuery] = useState<string>("");
+
+  useEffect(() => {
+    if (debounceTimer) {
+      clearTimeout(debounceTimer);
+    }
+    debounceTimer = setTimeout(() => {
+      setDebouncedQuery(query);
+    }, debouseDelay); // Adjust the debounce delay as needed
+  }, [query]);
+
+  useEffect(() => {
+    if (debouncedQuery) {
+      router.push(`/search/${debouncedQuery}`);
+    }
+  }, [debouncedQuery, router]);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(event.target.value);
@@ -25,6 +43,7 @@ export default function SearchBar({
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
     if (query.trim()) {
+      setDebouncedQuery(query);
       router.push(`/search/${query}`);
     }
   };
