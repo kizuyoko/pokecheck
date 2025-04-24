@@ -70,7 +70,6 @@ PokeCheck is a Pokémon checker that allows users to search for Pokémon and che
 ### API Integration
 (Branch: feature/api-integration)
 - [X] **Fetch data** from **PokéAPI**
-- [ ] Implement **state management** with **Redux**
 - [X] Connect UI to **Live API Data**
 - [ ] Display **loading states** and handle **errors**
 

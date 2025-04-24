@@ -29,7 +29,7 @@ export default function PokemonListCard({ pokemon, isPriority }: PokemonCardProp
         </figure>
         <figcaption>
           <h3>{capitalizedName}</h3>
-          <p className="text-gray-500">#{idToDisplay}</p>
+          <p className="text-gray-500 dark:text-gray-200">#{idToDisplay}</p>
         </figcaption>  
       </Link>
     </Card>
