@@ -19,11 +19,11 @@ export default function Home() {
         />
       ) : (
         <SearchBar 
-          classNameContainer="sm:w-lg sm:mt-4 sm:mb-8"
+          classNameContainer="sm:w-lg sm:mt-4"
           classNameText="sm:text-2xl"
         />
       )}
-      <Title>
+      <Title className="sm:mt-8">
         Featured Pokémon
       </Title>
       <div className="w-full grid grid-cols-2 place-items-center sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
