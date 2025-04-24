@@ -16,7 +16,7 @@ jest.mock('next/image', () => ({
 describe('PokemonProfileCard', () => {
   it('renders a Pokémon name', () => {
     render(<PokemonProfileCard pokemon={dummyPokemon} />);
-    expect(screen.getByRole('heading', { name: /bulbasaur/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /Bulbasaur/i })).toBeInTheDocument();
   });
 
   it('renders a Pokémon ID', () => {

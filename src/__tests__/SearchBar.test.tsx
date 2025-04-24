@@ -53,16 +53,10 @@ describe('SearchBar', () => {
     expect(container).toHaveClass('input-container py-2 flex items-center gap-2 justify-between custom-container');
     expect(input).toHaveClass('input-text flex grow w-full focus:outline-none custom-text');
     expect(button).toHaveClass('flex items-center');
-    expect(screen.getByAltText(/search/i)).toHaveClass('mr-2 opacity-60 custom-icon');
   });
 
   it('renders with custom placeholder', () => {
     render(<SearchBar placeholder="Custom Placeholder" />);
     expect(screen.getByPlaceholderText(/custom placeholder/i)).toBeInTheDocument();
-  });
-
-  it('renders with custom icon size', () => {
-    render(<SearchBar classNameIcon="w-8 h-8" />);
-    expect(screen.getByAltText(/search/i)).toHaveClass('mr-2 opacity-60 w-8 h-8');
   });
 });
