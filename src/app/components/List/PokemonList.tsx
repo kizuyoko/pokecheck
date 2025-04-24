@@ -3,7 +3,8 @@ import { useState } from "react";
 import PokemonListCard from "./PokemonListCard";
 import type { PokemonSimpleData } from "@/types/pokemon";
 import SkeltonPokemonListCard from "../skelton/SkeltonPokemonListCard";
-import PageInfoBar from "../ui/PageInfoBar";
+import PageInfoText from "../ui/PageInfoText";
+import Paginators from "../ui/Paginators";
 
 interface PokemonListProps {
   list: PokemonSimpleData[];
@@ -28,13 +29,11 @@ const PokemonList = ({ list }: PokemonListProps) => {
 
   return (
     <>
-      <PageInfoBar
+      <PageInfoText
         currentPage={currentPage}
         totalPages={totalPages}
         itemsPerPage={itemsPerPage}
         totalItems={list.length}
-        onPreviousPage={setPreviousPage}
-        onNextPage={setNextPage}
       />
       <div className="grid grid-cols-2 place-items-center sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
         {
@@ -53,11 +52,9 @@ const PokemonList = ({ list }: PokemonListProps) => {
           ))
         }
       </div>
-      <PageInfoBar
+      <Paginators
         currentPage={currentPage}
         totalPages={totalPages}
-        itemsPerPage={itemsPerPage}
-        totalItems={list.length}
         onPreviousPage={setPreviousPage}
         onNextPage={setNextPage}
       />
