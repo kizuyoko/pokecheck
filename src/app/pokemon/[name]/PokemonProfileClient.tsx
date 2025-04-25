@@ -8,15 +8,16 @@ import NotFound from '@/app/components/NotFound';
 import fallbackDataPokemon from '@/data/fallBackData';
 
 const PokemonProfileClient = ({ name }: { name: string }) => {
-  const { data, error, isLoading } = useQuery({
+  const { data, error, isLoading, refetch } = useQuery({
     queryKey: ['pokemon', name],
     queryFn: () => fetchPokemonByName(name),
     enabled: !!name,
-    initialData: fallbackDataPokemon
+    initialData: fallbackDataPokemon, 
+    retry: 3, // Retry once on failure
   });
 
   if (isLoading) return <SkeltonPokemonProfileCard />;
-  if (error) return <NotFound type='error' />;
+  if (error) return <NotFound type='error' retry={refetch} />;
   if (!data) return <NotFound type='data' />;
 
   return <PokemonProfileCard pokemon={data} />;
