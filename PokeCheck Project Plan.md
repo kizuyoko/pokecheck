@@ -71,8 +71,8 @@ PokeCheck is a Pokémon checker that allows users to search for Pokémon and che
 (Branch: feature/api-startup)
 - [X] **Fetch data** from **PokéAPI**
 - [X] Connect UI to **Live API Data**
-- [X] Display **loading states** and handle **errors**
-- [X] Write **unit tests (Jest)** for major components and logic
+- [X] Add **Fallback Data** during API downtime.
+- [X] Write **Jest unit tests** for key components and logic.
 
 ### Optimization
 (Branch: feature/optimization)
