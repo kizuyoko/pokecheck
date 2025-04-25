@@ -76,9 +76,9 @@ PokeCheck is a Pokémon checker that allows users to search for Pokémon and che
 
 ### Optimization
 (Branch: feature/optimization)
-- [ ] **Mock API** calls for test coverage
+- [X] **Mock API** calls for test coverage
 - [X] **Optimize app** for **performance** (code splitting, lazy loading)
-- [ ] Run **Lighthouse** audit and achieve 90+ score
+- [x] Run **Lighthouse** audit and achieve 90+ score
 
 ### Offline & Error Handling
 (Branch: feature/offline-support)
