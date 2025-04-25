@@ -1,11 +1,12 @@
 import { PokemonSimpleData } from "@/types/pokemon";
 import { POKEMON_IMAGE_URL } from "@/lib/constans";
+import type { PokemonGender } from "@/types/pokemon";
 
 export function displayId(id: number) {
   return id.toString().padStart(4, "0");
 }
 
-export function displayGender(gender: number): string{
+export function displayGender(gender: PokemonGender): string{
   switch (gender) {
     case -1: 
       return "Unknown";
