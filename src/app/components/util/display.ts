@@ -1,6 +1,7 @@
 import { PokemonSimpleData } from "@/types/pokemon";
 import { POKEMON_IMAGE_URL } from "@/lib/constans";
 import type { PokemonGender } from "@/types/pokemon";
+import type { PokemonType } from "@/types/pokemon";
 
 export function displayId(id: number) {
   return id.toString().padStart(4, "0");
@@ -28,4 +29,8 @@ export function displayImageUrl(id:number): string {
 export function getRandomPokemons(count: number, list: PokemonSimpleData[]): PokemonSimpleData[] {
   const shuffled = [...list].sort(() => 0.5 - Math.random());
   return shuffled.slice(0, count);
+}
+
+export function typeToDisplay(type: PokemonType): string {
+  return type.charAt(0).toUpperCase() + type.slice(1).toLowerCase();
 }

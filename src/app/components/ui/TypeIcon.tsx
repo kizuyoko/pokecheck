@@ -1,17 +1,21 @@
 import Image from "next/image";
+import type { PokemonType } from "@/types/pokemon";
 
 type Props = {
-  type: string; 
+  type: PokemonType; 
+  size?: number; 
+  className?: string;
 };  
 
-const TypeIcon = ({ type }: Props) => {
+const TypeIcon = ({ type, size=32, className }: Props) => {
   return (
     <Image 
       src={`/type_icons/${type}.svg`}
       alt={type}
-      width={32}
-      height={32}
+      width={size}
+      height={size}
       loading="lazy"
+      className={className}
     />
   );
 };

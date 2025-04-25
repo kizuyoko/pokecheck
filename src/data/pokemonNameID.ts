@@ -1,4 +1,4 @@
-export const pokemonNameID100 = [
+export const pokemonNameID = [
   {
   name: "bulbasaur",
   id: 1
