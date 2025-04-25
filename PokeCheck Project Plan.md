@@ -85,10 +85,10 @@ PokeCheck is a Pokémon checker that allows users to search for Pokémon and che
 
 ### Offline & Error Handling
 (Branch: feature/offline-support)
-- [ ] Retry logic for failed requests (max 3 tries)
-- [ ] **Cache** Pokémon data in **local storage**
-- [ ] Display clear **error messages** on failure
-- [ ] Add **Retry** button
+- [X] Retry logic for failed requests (max 3 tries)
+- [X] **Cache** Pokémon data in **local storage**
+- [X] Display clear **error messages** on failure
+- [X] Add **Retry** button
 
 ### Accessibility & UX
 (Branch: feature/accessibility)
