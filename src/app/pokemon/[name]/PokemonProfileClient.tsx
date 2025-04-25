@@ -14,7 +14,8 @@ const PokemonProfileClient = ({ name }: { name: string }) => {
   });
 
   if (isLoading) return <SkeltonPokemonProfileCard />;
-  if (error || !data) return <NotFound type='pokemon' />;
+  if (error) return <NotFound type='error' />;
+  if (!data) return <NotFound type='data' />;
 
   return <PokemonProfileCard pokemon={data} />;
 };
