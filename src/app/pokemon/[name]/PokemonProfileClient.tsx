@@ -6,17 +6,30 @@ import PokemonProfileCard from '@/app/components/Pokemon/PokemonProfileCard';
 import SkeltonPokemonProfileCard from '@/app/components/skelton/SkeltonPokemonProfileCard';
 import NotFound from '@/app/components/NotFound';
 import fallbackDataPokemon from '@/data/fallBackData';
+import type { Pokemon } from '@/types/pokemon';
+import { useEffect } from 'react';
 
 const PokemonProfileClient = ({ name }: { name: string }) => {
-  const { data, error, isLoading } = useQuery({
+  const cachedData = typeof window !== 'undefined' ? localStorage.getItem(`pokemon-${name}`) : null;
+  const initialData = cachedData ? JSON.parse(cachedData) : fallbackDataPokemon;
+
+  const { data, error, isLoading, refetch } = useQuery<Pokemon>({
     queryKey: ['pokemon', name],
     queryFn: () => fetchPokemonByName(name),
     enabled: !!name,
-    initialData: fallbackDataPokemon
+    initialData, 
+    retry: 3, // Retry once on failure
   });
 
+  useEffect(() => {
+    if (data) {
+      localStorage.setItem(`pokemon-${name}`, JSON.stringify(data));
+    }
+  }
+  , [data, name]);
+
   if (isLoading) return <SkeltonPokemonProfileCard />;
-  if (error) return <NotFound type='error' />;
+  if (error) return <NotFound type='error' retry={refetch} />;
   if (!data) return <NotFound type='data' />;
 
   return <PokemonProfileCard pokemon={data} />;
