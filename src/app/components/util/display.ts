@@ -1,6 +1,7 @@
 import { PokemonSimpleData } from "@/types/pokemon";
+import { POKEMON_IMAGE_URL } from "@/lib/constans";
 
-export function diplayId(id: number) {
+export function displayId(id: number) {
   return id.toString().padStart(4, "0");
 }
 
@@ -18,7 +19,7 @@ export function displayGender(gender: number): string{
 }
 
 export function displayImageUrl(id:number): string {
-  const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
+  const imageUrl = `${POKEMON_IMAGE_URL}/${id}.png`;
   return imageUrl;
 }
 

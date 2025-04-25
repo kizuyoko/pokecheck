@@ -2,7 +2,7 @@ import Card from "../ui/Card";
 import Image from "next/image";
 import Link from "next/link";
 import type { PokemonSimpleData } from "../../../types/pokemon";
-import { diplayId, displayImageUrl } from "../util/display";
+import { displayId, displayImageUrl } from "../util/display";
 interface PokemonCardProps {
   pokemon: PokemonSimpleData,
   isPriority?: boolean;
@@ -10,7 +10,7 @@ interface PokemonCardProps {
 
 export default function PokemonListCard({ pokemon, isPriority }: PokemonCardProps) {
   const { name, id} = pokemon;
-  const idToDisplay = diplayId(id);
+  const idToDisplay = displayId(id);
   const lowerCaseName = name.toLowerCase();
   const imageURL = displayImageUrl(id);
   const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);

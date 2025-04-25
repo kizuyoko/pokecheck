@@ -1,11 +1,11 @@
-import { diplayId } from "../util/display";
+import { displayId } from "../util/display";
 type Props = {
   id: number;
   name: string;
 };
 
 const PokemonNameSection = ({ name, id }: Props) => {
-  const idToDisplay = diplayId(id);
+  const idToDisplay = displayId(id);
   const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
 
   return (
