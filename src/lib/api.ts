@@ -1,5 +1,7 @@
+import { POKEMON_API_URL } from './constans';
+
 export async function fetchPokemonByName(name: string) {
-  const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+  const res = await fetch(`${POKEMON_API_URL}/${name}`);
   if (!res.ok) {
     throw new Error(`Failed Pokèmon ${name} fetching.`);
   }

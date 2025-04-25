@@ -67,17 +67,17 @@ PokeCheck is a Pokémon checker that allows users to search for Pokémon and che
 - [X] Show **Recommended Pokémon** on the Home page
 - [X] Implement **Search Results List** with fake data
 - [X] Create **Pokémon Detail Page** layout with placeholder content
-### API Integration
-(Branch: feature/api-integration)
+### API Startup & Testing
+(Branch: feature/api-startup)
 - [X] **Fetch data** from **PokéAPI**
 - [X] Connect UI to **Live API Data**
-- [ ] Display **loading states** and handle **errors**
+- [X] Add **Fallback Data** during API downtime.
+- [X] Write **Jest unit tests** for key components and logic.
 
-### Testing & Optimization
-(Branch: feature/testing-optimization)
-- [ ] Write **unit tests (Jest)** for major components and logic
+### Optimization
+(Branch: feature/optimization)
 - [ ] **Mock API** calls for test coverage
-- [ ] **Optimize app** for **performance** (code splitting, lazy loading)
+- [X] **Optimize app** for **performance** (code splitting, lazy loading)
 - [ ] Run **Lighthouse** audit and achieve 90+ score
 
 ### Offline & Error Handling
@@ -90,9 +90,9 @@ PokeCheck is a Pokémon checker that allows users to search for Pokémon and che
 
 ### Accessibility & UX
 (Branch: feature/accessibility)
-- [ ] Add **debouncing** to search
-- [ ] Implement **screen reader support**
-- [ ] Make layout touch-friendly and **responsive**
+- [X] Add **debouncing** to search
+- [X] Implement **screen reader support**
+- [X] Make layout touch-friendly and **responsive**
 
 ### Analytics & Observability
 (Branch: feature/observability)

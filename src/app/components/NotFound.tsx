@@ -2,13 +2,15 @@ import Card from "./ui/Card";
 import Title from "./ui/Title";
 
 type NotFoundProps = {
-  type: "pokemon" | "search" | "page";
+  type: "pokemon" | "search" | "page" | "error" | "data";
 };
 
 const messages = {
   pokemon: "The Pokémon you are looking for does not exist.",
   search: "No results found for your search.",
   page: "This page could not be found.",
+  error: "An error occurred while fetching the data.",
+  data: "No data available.",
 };
 
 export default function NotFound({ type = "page" }: NotFoundProps) {
