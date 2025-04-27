@@ -1,6 +1,6 @@
 import type { PokemonTypeDetail } from "@/types/pokemonTypeDetail.ts";
 
-export const pokemonTypeNameID: PokemonTypeDetail = {
+export const pokemonTypeExample: PokemonTypeDetail = {
 	damage_relations: {
 		double_damage_from: [
 			{
@@ -1144,3 +1144,5 @@ export const pokemonTypeNameID: PokemonTypeDetail = {
 		}
 	],	
 };
+
+export const pokemonTypeExampleList = [pokemonTypeExample];

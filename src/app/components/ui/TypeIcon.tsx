@@ -10,7 +10,7 @@ type Props = {
 
 const TypeIcon = ({ type, size=32, className }: Props) => {
   return (
-    <Link href={`/types/${type}`} className="transform transition-transform duration-300 hover:scale-130">
+    <Link href={`/type/${type}`} className="transform transition-transform duration-300 hover:scale-130">
       <Image 
         src={`/type_icons/${type}.svg`}
         alt={type}
