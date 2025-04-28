@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import type { PokemonType } from '@/types/pokemon';
 import { pokemonTypeExampleList } from '@/data/pokemonTypeExanple';
+import PokemonTypeProfileCard from '@/app/components/Type/PokemonTypeProfileCard';
 
 interface PageProps {
   params: Promise<{ type: PokemonType }>;
@@ -19,8 +20,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     .replace(/^\w/, (c) => c.toUpperCase());
 
   return {
-    title: `Pokémon ${type}`,
-    description: `Pokémon ${type} information`,
+    title: `Pokémon Type ${type}`,
+    description: `Pokémon type ${type} information`,
   };
 }
 
@@ -32,11 +33,14 @@ const TypePage = async({ params }: PageProps) => {
     notFound();
   }
 
+  const typeDetail = pokemonTypeExampleList.find((p) => p.name.toLowerCase() === type.toLowerCase());
+
+  if (!typeDetail) {
+    notFound();
+  }
+
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="text-4xl font-bold">Type Page - {type}</h1>
-      <p className="text-lg">This is the type page.</p>
-    </div>
+    <PokemonTypeProfileCard type={typeDetail} />
   );
 };
 

@@ -37,3 +37,11 @@ export function getRandomPokemons(count: number, list: PokemonSimpleData[]): Pok
 export function typeToDisplay(type: PokemonType): string {
   return type.charAt(0).toUpperCase() + type.slice(1).toLowerCase();
 }
+
+export function formatTitle(key: string): string {
+  // Convert the key to a more readable format
+  // For example: "double_damage_from" -> "Double Damage From"
+  return key
+    .replace(/_/g, ' ') 
+    .replace(/\b\w/g, (char) => char.toUpperCase()); 
+};
