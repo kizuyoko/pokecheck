@@ -9,6 +9,7 @@ const PokemonTypeImageSection = ({ type }: { type: string }) => {
         width={200}
         height={200}
         priority={true}
+        className='p-4'
       />
       <figcaption className="sr-only">{type}</figcaption>
     </figure>

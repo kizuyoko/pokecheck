@@ -1,4 +1,5 @@
 import { formatTitle } from "../util/display";
+import Link from "next/link";
 
 interface Props {
   damage_relations?: {
@@ -20,10 +21,24 @@ const PokemonTypeBasicInfoSection = ({ damage_relations }: Props) => {
           <div key={key} className="">
             <h4 className="text-lg, font-semibold">{formatTitle(key)}</h4>
             <p className="pb-2 text-lg sm:text-xl">
-                {relations && relations.length > 0
-                  ? relations.map((relation) => relation).join(', ')
-                  : 'None'}
-              </p>
+              {
+                relations && relations.length > 0 ? (
+                  relations.map((relation, index) => (
+                    <span key={relation} className="inline">
+                      {index > 0 && ', '}
+                      <Link
+                        href={`/type/${relation}`}
+                        className="hover:text-[var(--check-blue)] hover:underline"
+                      >
+                        {relation}
+                      </Link>
+                    </span>
+                  ))
+                ) : (
+                  'None'
+                )
+              }
+            </p>
           </div>
         ))}
       </div>

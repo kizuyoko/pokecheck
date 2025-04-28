@@ -23,7 +23,8 @@ const PokemonMoveList = ({ moves}: Props) => {
       <p className="pb-2 text-lg ">
         {displayedMoves.length > 0
           ? displayedMoves.map((move) => move).join(', ')
-          : 'None'}...
+          : 'None'}
+        {moves.length > maxToShowMoves && !showAllMove && '...'}
       </p>
       {moves.length > maxToShowMoves && (
         <Button

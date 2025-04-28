@@ -19,7 +19,7 @@ const PokemonTypePokemonSection = ({ pokemon }: Props) => {
   const displayedPokemon = showAllPokemon ? pokemon : pokemon.slice(0, maxToShowPokemon);
 
   return (
-    <div className="pokemon-property max-w-[380px]">
+    <div>
       <h3 className="text-2xl">Pokemons</h3>
       <p className="pb-2 text-lg">
         {displayedPokemon.length > 0
@@ -34,7 +34,8 @@ const PokemonTypePokemonSection = ({ pokemon }: Props) => {
                 </Link>
               </span>
             ))
-          : "None"}...
+          : "None"}
+        {pokemon.length > maxToShowPokemon && !showAllPokemon && "..."}
       </p>
       {pokemon.length > maxToShowPokemon && (
         <Button
