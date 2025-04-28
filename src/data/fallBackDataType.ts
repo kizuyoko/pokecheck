@@ -2,7 +2,7 @@ import type { PokemonTypeDetail } from "@/types/pokemonTypeDetail";
 
 const fallbackDataType: PokemonTypeDetail = {
   id: 0,
-  name: 'Unknown',
+  name: 'unknown',
   damage_relations: {
     double_damage_from: [],
     double_damage_to: [],
