@@ -1,10 +1,12 @@
+import React from "react";
 import TypeIcon from "../ui/TypeIcon";
 import { displayGender } from "../util/display";
+import { PokemonType } from "@/types/pokemon";
 
 type Props = {
   height: number;
   weight: number;
-  types: string[];
+  types: PokemonType[];
   gender_rate: number;
   genera: string[];
 };  

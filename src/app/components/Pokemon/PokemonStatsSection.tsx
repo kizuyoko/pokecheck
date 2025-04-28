@@ -15,7 +15,7 @@ const PokemonStatsSection = ({ abilities, stats }: Props) => {
           {abilities.map((ability) => (
             <li 
               key={ability}
-              className="pl-2"
+              className="pl-2 text-lg sm:text-xl"
             >
               {ability}
             </li>
@@ -28,7 +28,7 @@ const PokemonStatsSection = ({ abilities, stats }: Props) => {
           {stats.map((stat) => (
             <li 
               key={stat.stat}
-              className="pl-2"
+              className="pl-2 text-lg sm:text-xl"
             >
               {stat.stat}: {stat.value}
             </li>

@@ -2,7 +2,7 @@ import Card from "./ui/Card";
 import Title from "./ui/Title";
 
 type NotFoundProps = {
-  type: "pokemon" | "search" | "page" | "error" | "data";
+  type: "pokemon" | "search" | "page" | "error" | "data" | "type";
   retry?: () => void; // Optional retry function for error type
 };
 
@@ -12,6 +12,7 @@ const messages = {
   page: "This page could not be found.",
   error: "An error occurred while fetching the data.",
   data: "No data available.",
+  type: "The Pokémon type you are looking for does not exist.",
 };
 
 export default function NotFound({ type = "page", retry }: NotFoundProps) {

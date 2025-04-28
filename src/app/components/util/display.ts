@@ -1,6 +1,7 @@
 import { PokemonSimpleData } from "@/types/pokemon";
 import { POKEMON_IMAGE_URL } from "@/lib/constans";
 import type { PokemonGender } from "@/types/pokemon";
+import type { PokemonType } from "@/types/pokemon";
 
 export function displayId(id: number) {
   return id.toString().padStart(4, "0");
@@ -20,7 +21,10 @@ export function displayGender(gender: PokemonGender): string{
 }
 
 export function displayImageUrl(id:number): string {
-  const imageUrl = `${POKEMON_IMAGE_URL}/${id}.png`;
+  let imageUrl = `${POKEMON_IMAGE_URL}/${id}.png`;
+  if (id === 0) {
+    imageUrl = `/pokeball.svg`;
+  }
   return imageUrl;
 }
 
@@ -29,3 +33,15 @@ export function getRandomPokemons(count: number, list: PokemonSimpleData[]): Pok
   const shuffled = [...list].sort(() => 0.5 - Math.random());
   return shuffled.slice(0, count);
 }
+
+export function typeToDisplay(type: PokemonType): string {
+  return type.charAt(0).toUpperCase() + type.slice(1).toLowerCase();
+}
+
+export function formatTitle(key: string): string {
+  // Convert the key to a more readable format
+  // For example: "double_damage_from" -> "Double Damage From"
+  return key
+    .replace(/_/g, ' ') 
+    .replace(/\b\w/g, (char) => char.toUpperCase()); 
+};

@@ -5,7 +5,7 @@ import { fetchPokemonByName } from '@/lib/api';
 import PokemonProfileCard from '@/app/components/Pokemon/PokemonProfileCard';
 import SkeltonPokemonProfileCard from '@/app/components/skelton/SkeltonPokemonProfileCard';
 import NotFound from '@/app/components/NotFound';
-import fallbackDataPokemon from '@/data/fallBackData';
+import fallbackDataPokemon from '@/data/fallBackDataPokemon';
 import type { Pokemon } from '@/types/pokemon';
 import { useEffect } from 'react';
 
