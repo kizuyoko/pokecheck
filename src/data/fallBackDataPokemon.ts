@@ -2,7 +2,7 @@ import type { Pokemon } from '../types/pokemon';
 
 const fallbackDataPokemon: Pokemon= {
   id: 0,
-  name: 'Unknown',
+  name: 'unknown',
   types: ['normal'],
   abilities: ['none'],
   height: 0,
