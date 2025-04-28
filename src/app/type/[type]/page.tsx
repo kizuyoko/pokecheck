@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import type { PokemonType } from '@/types/pokemon';
-import { pokemonTypeExampleList } from '@/data/pokemonTypeExanple';
+import { pokemonTypeExampleList } from '@/data/pokemonTypeExample';
 import PokemonTypeProfileCard from '@/app/components/Type/PokemonTypeProfileCard';
 
 interface PageProps {
