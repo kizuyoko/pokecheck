@@ -3,10 +3,7 @@ import { useState } from "react";
 import Button from "../ui/Button";
 
 interface Props {
-  moves?: {
-    name: string;
-    url: string;
-  }[];
+  moves?: string[]
 }
 
 const PokemonMoveList = ({ moves}: Props) => {
@@ -18,14 +15,14 @@ const PokemonMoveList = ({ moves}: Props) => {
     return null;
   }
 
-  const displayedMoves = showAllMove ? moves : moves.slice(0, maxToShowMoves);
+  const displayedMoves = showAllMove ? moves : moves?.slice(0, maxToShowMoves);
 
   return (
     <>
       <h3 className="text-2xl">Moves</h3>
       <p className="pb-2 text-lg ">
         {displayedMoves.length > 0
-          ? displayedMoves.map((moveItem) => moveItem.name).join(', ')
+          ? displayedMoves.map((move) => move).join(', ')
           : 'None'}...
       </p>
       {moves.length > maxToShowMoves && (

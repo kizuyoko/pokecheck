@@ -4,10 +4,7 @@ import Link from "next/link";
 import Button from "../ui/Button";
 
 interface Props {
-  pokemon?: {
-    name: string;
-    url: string;
-  }[];
+  pokemon?: string[];
 }
 
 const PokemonTypePokemonSection = ({ pokemon }: Props) => {
@@ -27,13 +24,13 @@ const PokemonTypePokemonSection = ({ pokemon }: Props) => {
       <p className="pb-2 text-lg">
         {displayedPokemon.length > 0
           ? displayedPokemon.map((pokemon, index) => (
-              <span className="inline" key={pokemon.name}>
+              <span className="inline" key={pokemon}>
                 {index > 0 && ", "}
                 <Link
-                  href={`/pokemon/${pokemon.name}`}
+                  href={`/pokemon/${pokemon}`}
                   className="hover:text-[var(--check-blue)] hover:underline"
                 >
-                  {pokemon.name}
+                  {pokemon}
                 </Link>
               </span>
             ))

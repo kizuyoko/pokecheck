@@ -26,7 +26,7 @@ const PokemonTypeProfileCard = ({ type }: Props) => {
           />
           <div className="pokemon-property max-w-[380px]">
             <PokemonTypePokemonSection
-              pokemon={type.pokemon.map(p => ({ name: p.pokemon.name, url: p.pokemon.url }))}
+              pokemon={type.pokemon}
             />
             <PokemonTypeMovesSection  
               moves={type.moves}
