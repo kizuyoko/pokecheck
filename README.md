@@ -1,7 +1,7 @@
 ## Overview
 PokeCheck is a Pokémon matchup checker that allows users to search for Pokémon and check type effectiveness in battles. The app is designed to be fast, accessible, and user-friendly. For more details, see the [PokeCheck Project Plan](https://github.com/kizuyoko/pokecheck/blob/master/PokeCheck%20Project%20Plan.md).
 
-**Achievement**: PokeCheck scored 100 on the Lighthouse test! [View the result](https://pagespeed.web.dev/analysis/https-pokecheck-two-vercel-app/rm8q2djc37?form_factor=mobile). 100 points on both desktop and mobile for the homepage and search results page in Lighthouse performance audits!  While the detail page on mobile scored 96 points, I'm thrilled with the overall optimization, especially for key pages.
+**Achievement**: PokeCheck scored 100 on the Lighthouse test! [View the result](https://pagespeed.web.dev/analysis/https-pokecheck-two-vercel-app/48twsajc02?form_factor=mobile). 100 points on both desktop and mobile for the homepage and search results page in Lighthouse performance audits!  While the detail page on mobile scored 96 points, I'm thrilled with the overall optimization, especially for key pages.
 
 ## Features
 - **Home Page**: Displays featured Pokémon and a search bar.
