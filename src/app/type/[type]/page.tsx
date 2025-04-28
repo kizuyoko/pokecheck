@@ -1,11 +1,9 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import type { PokemonType } from '@/types/pokemon';
 import { pokemonTypeExampleList } from '@/data/pokemonTypeExample';
-import PokemonTypeProfileCard from '@/app/components/Type/PokemonTypeProfileCard';
-
+import PokemonTypeProfileClient from './PokemonTypeProfileClient';
 interface PageProps {
-  params: Promise<{ type: PokemonType }>;
+  params: Promise<{ type: string }>;
 }
 // This interface is a promise that resolves to an object with a type property of type PokemonType, see src/app/pokemon/[name]/page.tsx for more details.
 
@@ -33,14 +31,8 @@ const TypePage = async({ params }: PageProps) => {
     notFound();
   }
 
-  const typeDetail = pokemonTypeExampleList.find((p) => p.name.toLowerCase() === type.toLowerCase());
-
-  if (!typeDetail) {
-    notFound();
-  }
-
   return (
-    <PokemonTypeProfileCard type={typeDetail} />
+    <PokemonTypeProfileClient type={type} />
   );
 };
 

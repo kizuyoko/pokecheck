@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import PokemonProfileClient from '@/app/pokemon/[name]/PokemonProfileClient';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import fallbackDataPokemon from '@/data/fallBackData';
+import fallbackDataPokemon from '@/data/fallBackDataPokemon';
 
 const queryClient = new QueryClient();
 
