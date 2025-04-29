@@ -6,8 +6,8 @@ PokeCheck is a Pokémon matchup checker that allows users to search for Pokémon
 ## Features
 - **Home Page**: Displays featured Pokémon and a search bar.
 - **Search Functionality**: Users can search for Pokémon by name.
-- **Pokémon Details**: View stats, type, and abilities.
-- **Type Details**: Check type effectiveness.
+- **Pokémon Details**: View weight, height, stats, type, and abilities.
+- **Type Details**: Check type effectiveness, Pokémon, and move.
 - **Responsive Design**: Optimized for both desktop and mobile.
 
 ## Tech Stack

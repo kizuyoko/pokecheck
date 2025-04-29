@@ -27,9 +27,7 @@ export default function Home() {
       <Title className="sm:mt-8">
         Featured Pokémon
       </Title>
-      <div className="w-full grid grid-cols-2 place-items-center sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
-        <PokemonListHome list={randomPokemonList} />
-      </div>
+      <PokemonListHome list={randomPokemonList} />
       <Title className="sm:mt-8">
         Pokémon Types
       </Title>

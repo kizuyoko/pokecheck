@@ -31,10 +31,10 @@ PokeCheck is a Pokémon checker that allows users to search for Pokémon and che
 
 
 ### Phase 2 (Additional Features, if time allows)
-- [ ] **Type List Page**
-  - [ ] Display all Pokémon types with click-through to a type-specific details page
-- [ ] **Type Details Page**
-  - [ ] Show effectiveness against other types
+- [X] **Type List Page**
+  - [X] Display all Pokémon types with click-through to a type-specific details page
+- [X] **Type Details Page**
+  - [X] Show effectiveness against other types
 
 ## API Integration
 - **Source**: [PokéAPI](https://pokeapi.co)
@@ -97,11 +97,8 @@ PokeCheck is a Pokémon checker that allows users to search for Pokémon and che
 - [X] Make layout touch-friendly and **responsive**
 
 ### Analytics & Observability
-(Branch: feature/observability)
-- [ ] Track **user interactions** (e.g., search usage, click events)
-- [ ] Set up **A/B testing** with Statsig
-- [ ] **Cross-browser** testing (Chrome, Edge, Firefox)
-- [ ] Review code for readability and maintainability
+- [X] **Cross-browser** testing (Chrome, Edge, Firefox)
+- [X] Review code for readability and maintainability
 
 
 ## Deployment
