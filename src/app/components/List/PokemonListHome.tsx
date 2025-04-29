@@ -9,7 +9,7 @@ interface PokemonListProps {
 const PokemonListHome = ({ list }: PokemonListProps) => {
   const isLoading = false;
   return (
-    <>
+    <div className="w-full grid grid-cols-2 place-items-center sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
       {
         list.map((pokemon: PokemonSimpleData, index: number) => (
           isLoading ? (
@@ -25,7 +25,7 @@ const PokemonListHome = ({ list }: PokemonListProps) => {
           )
         ))
       }
-    </>
+    </div>
   );
 };
 

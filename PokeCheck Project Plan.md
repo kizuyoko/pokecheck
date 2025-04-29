@@ -100,7 +100,7 @@ PokeCheck is a Pokémon checker that allows users to search for Pokémon and che
 (Branch: feature/observability)
 - [ ] Track **user interactions** (e.g., search usage, click events)
 - [ ] Set up **A/B testing** with Statsig
-- [ ] **Cross-browser** testing (Chrome, Edge, Firefox)
+- [X] **Cross-browser** testing (Chrome, Edge, Firefox)
 - [ ] Review code for readability and maintainability
 
 
