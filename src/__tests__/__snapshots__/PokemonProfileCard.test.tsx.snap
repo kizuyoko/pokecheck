@@ -79,13 +79,18 @@ exports[`PokemonProfileCard matches the snapshot 1`] = `
               <div
                 class="gap-1 flex flex-col items-center text-center"
               >
-                <img
-                  alt="grass"
-                  height="32"
-                  loading="lazy"
-                  src="/type_icons/grass.svg"
-                  width="32"
-                />
+                <a
+                  class="transform transition-transform duration-300 hover:scale-130"
+                  href="/type/grass"
+                >
+                  <img
+                    alt="grass"
+                    height="32"
+                    loading="lazy"
+                    src="/type_icons/grass.svg"
+                    width="32"
+                  />
+                </a>
                 <p>
                   grass
                 </p>
@@ -93,13 +98,18 @@ exports[`PokemonProfileCard matches the snapshot 1`] = `
               <div
                 class="gap-1 flex flex-col items-center text-center"
               >
-                <img
-                  alt="poison"
-                  height="32"
-                  loading="lazy"
-                  src="/type_icons/poison.svg"
-                  width="32"
-                />
+                <a
+                  class="transform transition-transform duration-300 hover:scale-130"
+                  href="/type/poison"
+                >
+                  <img
+                    alt="poison"
+                    height="32"
+                    loading="lazy"
+                    src="/type_icons/poison.svg"
+                    width="32"
+                  />
+                </a>
                 <p>
                   poison
                 </p>
@@ -142,12 +152,12 @@ exports[`PokemonProfileCard matches the snapshot 1`] = `
               class="list-disc list-inside"
             >
               <li
-                class="pl-2"
+                class="pl-2 text-lg sm:text-xl"
               >
                 overgrow
               </li>
               <li
-                class="pl-2"
+                class="pl-2 text-lg sm:text-xl"
               >
                 chlorophyll
               </li>
@@ -163,32 +173,32 @@ exports[`PokemonProfileCard matches the snapshot 1`] = `
               class="list-disc list-inside"
             >
               <li
-                class="pl-2"
+                class="pl-2 text-lg sm:text-xl"
               >
                 hp: 45
               </li>
               <li
-                class="pl-2"
+                class="pl-2 text-lg sm:text-xl"
               >
                 attack: 49
               </li>
               <li
-                class="pl-2"
+                class="pl-2 text-lg sm:text-xl"
               >
                 defense: 49
               </li>
               <li
-                class="pl-2"
+                class="pl-2 text-lg sm:text-xl"
               >
                 special-attack: 65
               </li>
               <li
-                class="pl-2"
+                class="pl-2 text-lg sm:text-xl"
               >
                 special-defense: 65
               </li>
               <li
-                class="pl-2"
+                class="pl-2 text-lg sm:text-xl"
               >
                 speed: 45
               </li>
