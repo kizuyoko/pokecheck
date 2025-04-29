@@ -1,3 +1,5 @@
+![PokeCheck Screenshot](public/pokecheck-screenshot.png)
+
 ## Overview
 PokeCheck is a Pokémon matchup checker that allows users to search for Pokémon and check type effectiveness in battles. The app is designed to be fast, accessible, and user-friendly. For more details, see the [PokeCheck Project Plan](https://github.com/kizuyoko/pokecheck/blob/master/PokeCheck%20Project%20Plan.md).
 
