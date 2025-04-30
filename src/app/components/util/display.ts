@@ -45,3 +45,17 @@ export function formatTitle(key: string): string {
     .replace(/_/g, ' ') 
     .replace(/\b\w/g, (char) => char.toUpperCase()); 
 };
+
+export const getPrevNextItems = (
+  list: { name: string }[],
+  currentName: string
+): { prev: string | null; next: string | null } => {
+  const currentIndex = list.findIndex(
+    (item) => item.name.toLowerCase() === currentName.toLowerCase()
+  );
+
+  const prev = currentIndex > 0 ? list[currentIndex - 1].name : null;
+  const next = currentIndex < list.length - 1 ? list[currentIndex + 1].name : null;
+
+  return { prev, next };
+};
