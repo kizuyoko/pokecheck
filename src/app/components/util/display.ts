@@ -22,7 +22,7 @@ export function displayGender(gender: PokemonGender): string{
 
 export function displayImageUrl(id:number): string {
   let imageUrl = `${POKEMON_IMAGE_URL}/${id}.png`;
-  if (id === 0 || id > 10263) {
+  if (id === 0 || (id > 10263 && id < 10272)) {
     imageUrl = `/pokeball.svg`;
   }
   return imageUrl;
