@@ -8,6 +8,9 @@ import NotFound from '@/app/components/NotFound';
 import fallbackDataType from '@/data/fallBackDataType';
 import type { PokemonTypeDetail } from '@/types/pokemonTypeDetail';
 import { useEffect } from 'react';
+import { pokemonTypeNameID } from '@/data/pokemonTypeNameID';
+import Button from '@/app/components/ui/Button';
+import { getPrevNextItems } from '../../components/util/display';
 
 const PokemonTypeProfileClient = ({ type }: { type: string }) => {
   const cachedData = typeof window !== 'undefined' ? localStorage.getItem(`type-${type}`) : null;
@@ -31,7 +34,27 @@ const PokemonTypeProfileClient = ({ type }: { type: string }) => {
   if (error) return <NotFound type='error' retry={refetch} />;
   if (!data) return <NotFound type='data' />;
 
-  return <PokemonTypeProfileCard type={data} />;
+  const { prev: previousType, next: nextType } = getPrevNextItems(pokemonTypeNameID, type);
+
+  return (
+    <>
+      <PokemonTypeProfileCard type={data} />
+      <div className='flex justify-center items-center gap-2 my-4'>
+        <Button 
+          link={`/type/${previousType}`}
+          text='Previous'
+          buttonClassName='text-lg'
+          disabled={!previousType} // Disable button if there is no previous Type
+        />
+        <Button
+          link={`/type/${nextType}`}
+          text='Next'
+          buttonClassName='text-lg'
+          disabled={!nextType} // Disable button if there is no next Type
+        />
+      </div>
+    </>
+  );
 }
 
 export default PokemonTypeProfileClient;
