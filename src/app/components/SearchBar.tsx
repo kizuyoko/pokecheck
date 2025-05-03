@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useState, FormEvent, useEffect } from "react"; 
+import Image from "next/image";
 
 interface SearchBarProps {
   classNameContainer?: string;
@@ -65,15 +66,21 @@ export default function SearchBar({
         <input
           type="text"
           placeholder={placeholder}
-          className={`input-text flex grow w-full focus:outline-none ${classNameText}`}
+          className={`input-text flex grow focus:outline-none ${classNameText}`}
           value={query}
           onChange={handleInputChange}
         />
         <button 
           type="submit" 
-          className="flex items-center text-2xl hover:scale-110 transition-transform"
+          className="flex items-center hover:scale-110 transition-transform"
         >
-          🔍
+          <Image  
+            src="/search.svg"
+            width={20}
+            height={20}
+            alt="Search"
+            className="dark:filter dark:invert"
+          />
         </button>
       </form>
       {isLoading && 
