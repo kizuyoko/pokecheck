@@ -9,10 +9,3 @@ export const store = configureStore({
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
-
-store.subscribe(() => {
-  if (typeof window !== 'undefined') {
-    const state = store.getState();
-    localStorage.setItem('favorites', JSON.stringify(state.favorites));
-  }
-});

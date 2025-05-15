@@ -1,4 +1,6 @@
 import { displayId } from "../util/display";
+import FavoriteButton from "../ui/FavoriteButton";
+
 type Props = {
   id: number;
   name: string;
@@ -11,7 +13,10 @@ const PokemonNameSection = ({ name, id }: Props) => {
   return (
     <>
       <h2 className="sm:pt-6">{capitalizedName}</h2>
-      <p className="text-gray-500 dark:text-gray-200">#{idToDisplay}</p>
+      <div className="flex">
+        <FavoriteButton name={name} />
+        <p className="text-gray-500 dark:text-gray-200 ml-2">#{idToDisplay}</p>
+      </div>
     </>
   );
 };

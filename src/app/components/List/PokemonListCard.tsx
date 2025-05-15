@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { PokemonSimpleData } from "../../../types/pokemon";
 import { displayId, displayImageUrl } from "../util/display";
+import FavoriteButton from "../ui/FavoriteButton";
 interface PokemonCardProps {
   pokemon: PokemonSimpleData,
   isPriority?: boolean;
@@ -29,7 +30,10 @@ export default function PokemonListCard({ pokemon, isPriority }: PokemonCardProp
         </figure>
         <figcaption>
           <h3>{capitalizedName}</h3>
-          <p className="text-gray-500 dark:text-gray-200">#{idToDisplay}</p>
+          <div className="flex">
+            <FavoriteButton name={name} />
+            <p className="text-gray-500 dark:text-gray-200 ml-2">#{idToDisplay}</p>
+          </div>
         </figcaption>  
       </Link>
     </Card>

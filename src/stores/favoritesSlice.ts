@@ -1,12 +1,14 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const loadInitialState = (): string[] => {
-  if (typeof window != undefined) {
-    const saved = localStorage.getItem('favorites');
-    return saved ? JSON.parse(saved) : [];
+function loadInitialState() {
+  if (typeof window === 'undefined') return [];
+  try {
+    const item = localStorage.getItem('favorites');
+    return item ? JSON.parse(item) : [];
+  } catch {
+    return [];
   }
-  return [];
-};
+}
 
 const initialState: string[] = loadInitialState();
 
