@@ -10,6 +10,8 @@ PokeCheck is a Pokémon matchup checker that allows users to search for Pokémon
 - **Search Functionality**: Users can search for Pokémon by name.
 - **Pokémon Details**: View weight, height, stats, type, and abilities.
 - **Type Details**: Check type effectiveness, Pokémon, and move.
+- **Favorite Functionality**: Users can add/remove Pokémon to favorites with a heart icon. Favorite list is persisted via localStorage.
+- **Favorite List Page**: View all your favorited Pokémon in one place.
 - **Responsive Design**: Optimized for both desktop and mobile.
 
 ## Tech Stack
@@ -18,6 +20,7 @@ PokeCheck is a Pokémon matchup checker that allows users to search for Pokémon
 - **Framework**: React, Next.js
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
+- **State Management**: Redux Toolkit
 - **API Requests**: Axios, TanStack Query
 - **Component Documentation**: Storybook
 - **Testing**: Jest (unit testing)
