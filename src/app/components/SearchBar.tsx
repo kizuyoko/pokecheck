@@ -58,7 +58,7 @@ export default function SearchBar({
   };
 
   return (
-    <div className="flex">
+    <>
       <form 
         className={`input-container py-2 flex items-center gap-2 justify-between ${classNameContainer}`}
         onSubmit={handleSubmit}
@@ -67,7 +67,7 @@ export default function SearchBar({
         <input
           type="text"
           placeholder={placeholder}
-          className={`input-text flex grow focus:outline-none ${classNameText}`}
+          className={`sm:w-auto w-[195px] flex grow focus:outline-none ${classNameText}`}
           value={query}
           onChange={handleInputChange}
         />
@@ -89,6 +89,6 @@ export default function SearchBar({
           <span className="text-sm text-gray-500 animate-pulse">Loading...</span>
         </div>
       }
-    </div>
+    </>
   );
 }
