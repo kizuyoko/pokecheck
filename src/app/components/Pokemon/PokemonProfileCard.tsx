@@ -4,6 +4,7 @@ import PokemonImageSection from "./PokemonImageSection";
 import PokemonNameSection from "./PokemonNameSection";
 import PokemonBasicInfoSection from "./PokemonBasicInfoSection";
 import PokemonStatsSection from "./PokemonStatsSection";
+import FavoriteButton from "../ui/FavoriteButton";
 
 type Props = {
   pokemon: Pokemon;
@@ -11,7 +12,7 @@ type Props = {
 
 const PokemonProfileCard = ({ pokemon }: Props) => {
   return (
-    <Card className="flex flex-col md:flex-row md:items-start gap-x-12">
+    <Card className="flex flex-col md:flex-row md:items-start gap-x-12 relative">
       <div className="items-center flex justify-center">
         <PokemonImageSection
           id={pokemon.id} 
@@ -37,6 +38,11 @@ const PokemonProfileCard = ({ pokemon }: Props) => {
           />
         </div> 
       </div>
+      <FavoriteButton 
+        name={pokemon.name} 
+        classsNameButton="absolute right-4 top-4"
+        size={28}
+      />
     </Card>
   );
 };

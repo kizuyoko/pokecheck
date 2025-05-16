@@ -25,6 +25,9 @@ const favoritesSlice = createSlice({
       return state.filter(name => name !== action.payload);
     },
     toggleFavorite: (state, action: PayloadAction<string>) => {
+      if (!action.payload || action.payload.toLowerCase() === 'unknown') {
+        return state;
+      }
       const index = state.indexOf(action.payload);
       if (index >=0) {
         return state.filter(name => name !== action.payload);
