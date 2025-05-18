@@ -2,7 +2,6 @@
 import { useRouter } from "next/navigation";
 import { useState, FormEvent, useEffect } from "react"; 
 import Image from "next/image";
-import FavoritePageLink from "./ui/FavoritePageLink";
 
 interface SearchBarProps {
   classNameContainer?: string;
@@ -58,16 +57,16 @@ export default function SearchBar({
   };
 
   return (
-    <>
+    <div className={`w-full sm:w-auto flex items-center ${classNameContainer}`}>
       <form 
-        className={`input-container py-2 flex items-center gap-2 justify-between ${classNameContainer}`}
+        className={`input-container py-2 flex items-center gap-2 justify-between grow`}
         onSubmit={handleSubmit}
         role="form"
       >
         <input
           type="text"
           placeholder={placeholder}
-          className={`sm:w-auto w-[195px] flex grow focus:outline-none ${classNameText}`}
+          className={`flex grow focus:outline-none ${classNameText}`}
           value={query}
           onChange={handleInputChange}
         />
@@ -82,13 +81,13 @@ export default function SearchBar({
             className="dark:filter dark:invert object-contain"
           />
         </button>
-        <FavoritePageLink />
+        
       </form>
       {isLoading && 
         <div className="w-full flex justify-center items-center py-2">
           <span className="text-sm text-gray-500 animate-pulse">Loading...</span>
         </div>
       }
-    </>
+    </div>
   );
 }
