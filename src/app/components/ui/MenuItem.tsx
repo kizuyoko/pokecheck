@@ -33,7 +33,8 @@ const MenuItem = ({ text, href, iconSrc, isFavorite, imageSize }: PropType) => {
           iconSrcToShow ? (
             <Image 
               src={iconSrcToShow}
-              alt={text}
+              alt=""
+              aria-hidden="true"
               width={imageSize}
               height={imageSize}
               className="transition-transform"
