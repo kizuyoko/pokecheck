@@ -17,7 +17,7 @@ export default function PokemonListCard({ pokemon, isPriority }: PokemonCardProp
   const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
  
   return (
-    <Card href="/pokemon" className="w-full h-full transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+    <Card href="/pokemon" className="w-full h-full transform transition-transform duration-300 hover:scale-105 hover:shadow-lg relative">
       <Link href={`/pokemon/${lowerCaseName}`} className="w-full">
         <figure className="flex justify-center w-full">
           <Image
@@ -31,11 +31,14 @@ export default function PokemonListCard({ pokemon, isPriority }: PokemonCardProp
         <figcaption>
           <h3>{capitalizedName}</h3>
           <div className="flex">
-            <FavoriteButton name={name} />
-            <p className="text-gray-500 dark:text-gray-200 ml-2">#{idToDisplay}</p>
+            <p className="text-gray-500 dark:text-gray-200">#{idToDisplay}</p>
           </div>
         </figcaption>  
       </Link>
+      <FavoriteButton 
+        name={name}
+        classsNameButton="absolute right-3 bottom-3"
+      />
     </Card>
   );
 }

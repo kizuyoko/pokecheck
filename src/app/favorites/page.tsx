@@ -21,7 +21,7 @@ const FavoritePage = () => {
 
   return (
     <>
-      <h2>Favorite Pokémon</h2>
+      <h2>Your Favorite Pokémons</h2>
       <PokemonList 
         list={favoritePokemons}
       />
