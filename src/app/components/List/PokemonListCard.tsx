@@ -37,7 +37,7 @@ export default function PokemonListCard({ pokemon, isPriority }: PokemonCardProp
       </Link>
       <FavoriteButton 
         name={name}
-        classsNameButton="absolute right-3 bottom-3"
+        classsNameButton="absolute right-1 bottom-2"
       />
     </Card>
   );
