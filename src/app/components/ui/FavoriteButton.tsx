@@ -1,5 +1,4 @@
 'use client';
-import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState, AppDispatch } from "@/stores/store";
 import { toggleFavorite } from "@/stores/favoritesSlice";
@@ -13,23 +12,19 @@ type Props = {
 };
 
 const FavoriteButton = ({ name, classsNameButton, classNameImage, size=20 }: Props) => {
-  const [isHovered, setIsHovered] = useState(false);
-
   const dispatch = useDispatch<AppDispatch>();
   const favorites = useSelector((state: RootState) => state.favorites);
   const isFavorite = favorites.includes(name);
 
-const imageSrc = isHovered
-  ? (isFavorite ? '/heart_empty.svg' : '/heart_full.svg')
-  : (isFavorite ? '/heart_full.svg' : '/heart_empty.svg');
+const imageSrc = isFavorite
+  ? '/heart_full.svg'
+  : '/heart_empty.svg'
 
   const imageAlt = isFavorite ? 'Favorite' : 'Not favorite yet';
 
   return (
     <button 
       onClick={() => dispatch(toggleFavorite(name))}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
       className={`cursor-pointer ${classsNameButton}`}
     >
       <Image 
