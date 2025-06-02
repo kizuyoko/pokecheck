@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "api": "ts-node-dev --project server/tsconfig.json server/src/index.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -16,6 +17,8 @@
     "@storybook/nextjs": "^8.6.12",
     "@tanstack/react-query": "^5.74.4",
     "axios": "^1.8.4",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
     "next": "^15.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -36,8 +39,10 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
+    "@types/cors": "^2.8.18",
+    "@types/express": "^5.0.2",
     "@types/jest": "^29.5.14",
-    "@types/node": "^20",
+    "@types/node": "^20.17.57",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19",
     "eslint": "^9",
@@ -50,11 +55,26 @@
     "tailwindcss": "^4",
     "ts-jest": "^29.3.2",
     "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.8.3"
   },
   "eslintConfig": {
     "extends": [
       "plugin:storybook/recommended"
     ]
-  }
+  },
+  "description": "![PokeCheck Screenshot](public/pokecheck-screenshot.png)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kizuyoko/pokecheck.git"
+  },
+  "keywords": [],
+  "author": "kizuyoko",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kizuyoko/pokecheck/issues"
+  },
+  "homepage": "https://github.com/kizuyoko/pokecheck#readme"
 }
