@@ -1,10 +1,19 @@
 import express from 'express';
+import cors from 'cors';
+import { pokemonNameID } from './data/pokemonNameID';
+import { pokemonTypeNameID } from './data/pokemonTypeNameID';
 
 const app = express();
-const PORT = 4000;
+const PORT = 3001;
 
-app.get('/', (_req, res) => {
-  res.send('Hello from Express!');
+app.use(cors());
+
+app.get('/api/types', (_req, res) => {
+  res.json(pokemonTypeNameID);
+});
+
+app.get('/api/pokemon', (_req, res) => {
+  res.json(pokemonNameID);
 });
 
 app.listen(PORT, () => {
