@@ -4,7 +4,7 @@ import { pokemonNameID } from './data/pokemonNameID';
 import { pokemonTypeNameID } from './data/pokemonTypeNameID';
 
 const app = express();
-const PORT = 3001;
+const port = process.env.PORT || 3001;
 
 const allowedOrigins = 
   process.env.NODE_ENV === 'production'
@@ -29,8 +29,8 @@ app.get('/api/pokemon', (_req, res) => {
   res.json(pokemonNameID);
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running at http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`Server is running at http://localhost:${port}`);
 });
 
 
