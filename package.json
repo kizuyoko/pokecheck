@@ -10,7 +10,9 @@
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test": "jest"
+    "test": "jest",
+    "build:server": "tsc -p server/tsconfig.json",
+    "start:server": "node server/dist/index.js"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
