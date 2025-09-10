@@ -15,7 +15,9 @@
   - Secondary Accent: #1574B3 (Check Blue)  
 - **Responsive Design**: Ensure usability on both desktop and mobile devices
 
-## Phase 1 (Core Features)
+## Phase 1: Foundations
+- Project setup, UI components, dummy data, basic API integration
+
 ### Start Up
 (Branch: feature/start-up)
 - [X] **Planning** README, Project Planning
@@ -64,13 +66,18 @@
 - [X] **Cross-browser** testing (Chrome, Edge, Firefox)
 - [X] Review code for readability and maintainability
 
-## Phase 2
+
+## Phase 2: Extended Features
+- Type list page, type detail page, additional improvements
+
 ### Extended Features
 (Branch: feature/additional-improvement)
 - [X] **Type List Page** Display all Pokémon types with click-through to a type-specific details page
 - [X] **Type Details Page** Show effectiveness against other types
 
-## Phase 3 
+
+## Phase 3 - Enhancements & Infrastructure
+- Server connection, accessibility improvements, Cypress E2E tests, CI/CD setup, documentation optimization
 
 ### Server
 (Branch: feature/express-api)
