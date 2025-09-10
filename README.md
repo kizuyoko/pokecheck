@@ -3,7 +3,13 @@
 ## Overview
 PokeCheck is a Pokémon matchup checker that allows users to search for Pokémon and check type effectiveness in battles. The app is designed to be fast, accessible, and user-friendly. For more details, see the [PokeCheck Project Plan](https://github.com/kizuyoko/pokecheck/blob/master/PokeCheck%20Project%20Plan.md).
 
-**Achievement**: PokeCheck scored 100 on the Lighthouse test! [View the result](https://pagespeed.web.dev/analysis/https-pokecheck-two-vercel-app/48twsajc02?form_factor=mobile). 100 points on both desktop and mobile for the homepage and search results page in Lighthouse performance audits!  While the detail page on mobile scored 96 points, I'm thrilled with the overall optimization, especially for key pages.
+**Phase 3 is here!**  
+In this phase, PokeCheck connects to a dedicated Express.js server for API requests, enhancing performance and scalability. Accessibility has been further improved, and the app is tested end-to-end with Cypress to ensure a smooth user experience. Continuous Integration and Deployment (CI/CD) pipelines via GitHub Actions have also been set up to automate testing and deployment, keeping the project robust and reliable.
+
+**Achievement**
+- 100 points on Lighthouse performance for desktop and mobile (homepage & search page)
+- 96 points on mobile for the detail page
+- Optimized for accessibility and responsive design
 
 ## Features
 - **Home Page**: Displays featured Pokémon and a search bar.
@@ -23,8 +29,10 @@ PokeCheck is a Pokémon matchup checker that allows users to search for Pokémon
 - **State Management**: Redux Toolkit
 - **API Requests**: Axios, TanStack Query
 - **Component Documentation**: Storybook
-- **Testing**: Jest (unit testing)
+- **Unit Testing**: Jest
+- **E2E Testing**: Cypress
 - **Performance Testing**: Lighthouse
+- **Version Control**: GitHub (Feature-based branching strategy)
 
 ## Getting Started
 
