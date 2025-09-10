@@ -1,41 +1,4 @@
 # PokeCheck Project Plan
-
-## Overview
-PokeCheck is a Pokémon checker that allows users to search for Pokémon and check type effectiveness. The application will be developed using modern web technologies with a focus on performance, usability, and accessibility.
-
-## Technologies Used
-- **Frontend Framework**: React (Next.js)
-- **State Management**: Redux
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Data Fetching**: TanStack Query, Axios
-- **Component Library & Documentation**: Storybook
-- **Testing**: Jest (unit testing)
-- **Version Control**: GitHub (Feature-based branching strategy)
-- **UI Design**: Figma
-
-## Features
-### Phase 1 (Core Features)
-- [X] **Preparation**
-  - [X] Planning
-  - [X] Wireframe by Figma
-- [X] **Home Page**
-  - [X] Title and search form
-  - [X] Display random recommended Pokémon
-- [X] **Search Page**
-  - [X] Users can search for Pokémon by name
-  - [X] Display search results as a list of images and names
-  - [X] Click on a Pokémon to navigate to its details page
-- [X] **Pokémon Details Page**
-  - [X] Show Pokémon type, stats, and relevant information
-
-
-### Phase 2 (Additional Features, if time allows)
-- [X] **Type List Page**
-  - [X] Display all Pokémon types with click-through to a type-specific details page
-- [X] **Type Details Page**
-  - [X] Show effectiveness against other types
-
 ## API Integration
 - **Source**: [PokéAPI](https://pokeapi.co)
 - **Endpoints Used**:
@@ -46,16 +9,17 @@ PokeCheck is a Pokémon checker that allows users to search for Pokémon and che
 - **Typography**: Bungee (logo & title), Baloo 2 (body text)
 - **Color Scheme**:
   - Background: #FFFBF4 (Floral White)
-  - Card Backgorund: #ffffff (White)
-  - Text: #3b3b3b (Blach Olive)
+  - Card Background: #ffffff (White)
+  - Text: #3b3b3b (Black Olive)
   - Primary Accent: #F5542E (Orange Red)
   - Secondary Accent: #1574B3 (Check Blue)  
-
 - **Responsive Design**: Ensure usability on both desktop and mobile devices
 
-## Development Process
+## Phase 1 (Core Features)
 ### Start Up
 (Branch: feature/start-up)
+- [X] **Planning** README, Project Planning
+- [X] **Wireframe** by Figma
 - [X] **Setup Project Structure** (Next.js, Redux, TypeScript, Tailwind, Axios, Storybook)
 - [X] **Implement UI Components** (Header, Search Bar, Pokémon List, Detail Page)
 - [X] **Component Documentation with Storybook**
@@ -100,15 +64,36 @@ PokeCheck is a Pokémon checker that allows users to search for Pokémon and che
 - [X] **Cross-browser** testing (Chrome, Edge, Firefox)
 - [X] Review code for readability and maintainability
 
+## Phase 2
+### Extended Features
+(Branch: feature/additional-improvement)
+- [X] **Type List Page** Display all Pokémon types with click-through to a type-specific details page
+- [X] **Type Details Page** Show effectiveness against other types
 
-## Deployment
-- [X] **Platform**: Vercel
-- [X] **Version Control**: GitHub (Feature-based branching strategy)
+## Phase 3 
 
-## Future Work
-- [ ] Evolution Checker feature
-- [ ] Team Composition Checker feature
-- [ ] Progressive Web App (PWA) enhancements
+### Server
+(Branch: feature/express-api)
+- [X] Setup **Express.js** server
+- [ ] Connect server to PokéAPI
+
+### Accessibility
+(Branch: feature/accessibility)
+- [ ] Run **WAVE accessibility** checks
+
+### Testing
+(Branch: feature/cypress)
+- [ ] Write **Cypress end-to-end** tests
+
+### CI/CD - Git
+(Branch: feature/gitHub-actions)
+  - [ ] Setup **GitHub Actions** for automated testing and deployment
+
+### Documentation enhancement
+(Branch: feature/documentation)
+- [ ] **Update Documentation** README and Planning
+- [ ] Review **Storybook** documentation
+- [ ] Add **inline code** comments where necessary
 
 ---
 
