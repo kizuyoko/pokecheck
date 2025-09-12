@@ -21,6 +21,10 @@ app.use(cors({
   }
 }));
 
+app.get("/", (_req, res) => {
+  res.send("Welcome to PokeCheck API! You can go to /api/pokemon or /api/types to see the data.");
+});
+
 app.get('/api/types', (_req, res) => {
   res.json(pokemonTypeNameID);
 });
