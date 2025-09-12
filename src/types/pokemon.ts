@@ -43,4 +43,7 @@ export type PokemonType =
   "dragon" |
   "dark" |
   "fairy";
-
+  export interface PokemonTypeData {
+    id: number;
+    name: PokemonType;
+  }
