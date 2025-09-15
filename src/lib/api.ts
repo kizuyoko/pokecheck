@@ -1,4 +1,5 @@
-import { POKEMON_API_URL, TYPE_API_URL } from './constans';
+import { POKEMON_API_URL, TYPE_API_URL, OWN_SERVER_API_URL_POKEMON, OWN_SERVER_API_URL_TYPES } from './constans';
+import { PokemonTypeData, PokemonSimpleData } from '@/types/pokemon';
 
 export async function fetchPokemonByName(name: string) {
   const res = await fetch(`${POKEMON_API_URL}/${name}`);
@@ -49,3 +50,19 @@ export async function fetchPokemonTypeByName(type: string) {
     moves: data.moves.map((m: { name: string }) => m.name),
   };  
 }
+
+export async function fetchOwnServerTypes(): Promise<PokemonTypeData[]> {
+  const res = await fetch(OWN_SERVER_API_URL_TYPES);
+  if (!res.ok) {
+    throw new Error(`Failed fetching all Pokémon types.`);
+  }
+  return res.json();
+}
+
+export async function fetchOwnServerPokemons(): Promise<PokemonSimpleData[]> {
+  const res = await fetch(OWN_SERVER_API_URL_POKEMON);  
+  if (!res.ok) {
+    throw new Error(`Failed fetching all Pokémon.`);
+  }
+  return res.json();
+} 
