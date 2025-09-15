@@ -8,7 +8,10 @@ const port = process.env.PORT || 3001;
 
 const allowedOrigins = 
   process.env.NODE_ENV === 'production'
-    ? ['https://pokecheck-two.vercel.app']
+    ? [
+        'https://pokecheck-two.vercel.app', // Vercel deployment URL
+        'https://pokecheck-ssh3.onrender.com', // Render API URL
+      ]
     : ['http://localhost:3000', 'http://localhost:3001'];
 
 app.use(cors({
