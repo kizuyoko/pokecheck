@@ -1,15 +1,17 @@
+'use client';
+
 import  Logo from "./components/ui/Logo";
 import Title from "./components/ui/Title";
 import SearchBar from "./components/SearchBar";
 import PokemonListHome from "./components/List/PokemonListHome";
-import { pokemonNameID } from "@/data/pokemonNameID";
 import { getRandomPokemons } from "./components/util/display";
 import SkeltonSearchBar from "./components/skelton/SkeltonSearchBar";
 import PokemonTypeList from "./components/Type/PokemonTypeList";
+import { usePokemons } from "@/lib/hooks/usePokemons";
 
 export default function Home() {
-  const isLoading = false;
-  const randomPokemonList = getRandomPokemons(4, pokemonNameID);
+  const { data: pokemons = [], isLoading } = usePokemons();
+  const randomPokemonList = getRandomPokemons(4, pokemons);
 
   return (
     <section className="py-8 flex flex-col items-center gap-6 text-center">

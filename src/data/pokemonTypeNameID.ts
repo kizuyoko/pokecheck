@@ -1,3 +1,7 @@
+// This file contains a mapping of Pokémon type names to their corresponding IDs.
+// Currently not used (data is fetched from the API with our own server at root/server/src/data/pokemonTypeNameID.ts instead).
+// Kept here only for reference or possible future use. 
+
 import type { PokemonType } from '../types/pokemon';
 export const pokemonTypeNameID: {id: number, name: PokemonType}[] = [
   { id: 1, name: 'normal' },

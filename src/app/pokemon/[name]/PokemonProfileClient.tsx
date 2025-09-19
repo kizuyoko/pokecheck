@@ -8,11 +8,14 @@ import NotFound from '@/app/components/NotFound';
 import fallbackDataPokemon from '@/data/fallBackDataPokemon';
 import type { Pokemon } from '@/types/pokemon';
 import { useEffect } from 'react';
-import { pokemonNameID } from '@/data/pokemonNameID';
+import { usePokemons } from '@/lib/hooks/usePokemons';
 import Button from '@/app/components/ui/Button';
 import { getPrevNextItems } from '../../components/util/display';
 
 const PokemonProfileClient = ({ name }: { name: string }) => {
+  const { data: pokemons = [] } = usePokemons();
+  const pokemonNameID = pokemons;
+
   const cachedData = typeof window !== 'undefined' ? localStorage.getItem(`pokemon-${name}`) : null;
   const initialData = cachedData ? JSON.parse(cachedData) : fallbackDataPokemon;
 

@@ -8,11 +8,13 @@ import NotFound from '@/app/components/NotFound';
 import fallbackDataType from '@/data/fallBackDataType';
 import type { PokemonTypeDetail } from '@/types/pokemonTypeDetail';
 import { useEffect } from 'react';
-import { pokemonTypeNameID } from '@/data/pokemonTypeNameID';
+import { usePokemonTypes } from '@/lib/hooks/usePokemonTypes';  
 import Button from '@/app/components/ui/Button';
 import { getPrevNextItems } from '../../components/util/display';
 
 const PokemonTypeProfileClient = ({ type }: { type: string }) => {
+  const { data: types = [] } = usePokemonTypes();
+
   const cachedData = typeof window !== 'undefined' ? localStorage.getItem(`type-${type}`) : null;
   const initialData = cachedData ? JSON.parse(cachedData) : fallbackDataType; // Use the fallback data
 
@@ -34,7 +36,7 @@ const PokemonTypeProfileClient = ({ type }: { type: string }) => {
   if (error) return <NotFound type='error' retry={refetch} />;
   if (!data) return <NotFound type='data' />;
 
-  const { prev: previousType, next: nextType } = getPrevNextItems(pokemonTypeNameID, type);
+  const { prev: previousType, next: nextType } = getPrevNextItems(types, type);
 
   return (
     <>

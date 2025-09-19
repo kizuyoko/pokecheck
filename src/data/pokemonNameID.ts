@@ -1,3 +1,7 @@
+// This file contains a mapping of Pokémon names to their corresponding IDs.
+// Currently not used (data is fetched from the API with our own server at root/server/src/data/pokemonNameID.ts instead).
+// Kept here only for reference or possible future use.
+
 export const pokemonNameID = [
   {
   name: "bulbasaur",
