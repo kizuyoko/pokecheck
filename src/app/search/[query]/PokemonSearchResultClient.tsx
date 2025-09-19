@@ -1,10 +1,13 @@
 'use client';
-import { pokemonNameID } from "@/data/pokemonNameID";
+import { usePokemons } from '@/lib/hooks/usePokemons';
 import PokemonList from "@/app/components/List/PokemonList";
 import Title from "@/app/components/ui/Title";
 import NotFound from "@/app/components/NotFound";
 
 export default function PokemonSearchResultClient({ query }: { query: string }) {
+  const { data: pokemons = [] } = usePokemons();
+  const pokemonNameID = pokemons;
+  
   const results = pokemonNameID.filter((p) =>
     p.name.toLowerCase().includes(query.toLowerCase())
   );    
