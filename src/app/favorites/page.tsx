@@ -5,11 +5,12 @@ import { RootState } from "@/stores/store";
 import Card from "../components/ui/Card";
 import Title from "../components/ui/Title";
 import PokemonList from "../components/List/PokemonList";
-import { pokemonNameID } from "@/data/pokemonNameID";
+import { usePokemons } from "@/lib/hooks/usePokemons";
 
 const FavoritePage = () => {
   const favorites = useSelector((state: RootState) => state.favorites);
-  const favoritePokemons = pokemonNameID.filter(pokemon => favorites.includes(pokemon.name));
+  const { data: pokemons = [] } = usePokemons();
+  const favoritePokemons = pokemons.filter(pokemon => favorites.includes(pokemon.name));
 
   if (favoritePokemons.length === 0) {
     return (

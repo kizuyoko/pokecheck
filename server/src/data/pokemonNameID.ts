@@ -3,10 +3,7 @@ export const pokemonNameID = [
   name: "bulbasaur",
   id: 1
   },
-  {
-  name: "ivysaur",
-  id: 2
-  },
+//ivysaur
   {
   name: "venusaur",
   id: 3
