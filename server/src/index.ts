@@ -32,8 +32,16 @@ app.get('/api/types', (_req, res) => {
   res.json(pokemonTypeNameID);
 });
 
-app.get('/api/pokemon', (_req, res) => {
-  res.json(pokemonNameID);
+app.get('/api/pokemon', (req, res) => {
+  const page = parseInt(req.query.page as string) || 1;
+  const limit = parseInt(req.query.limit as string) || 20;
+
+  const start = (page - 1) * limit;
+  const end = start + limit;
+
+  const paginatedPokemon = pokemonNameID.slice(start, end);
+
+  res.json(paginatedPokemon);
 });
 
 app.listen(port, () => {
