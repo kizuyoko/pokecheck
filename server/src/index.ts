@@ -34,7 +34,7 @@ app.get('/api/types', (_req, res) => {
 
 app.get('/api/pokemon', (req, res) => {
   const page = parseInt(req.query.page as string) || 1;
-  const limit = parseInt(req.query.limit as string) || 20;
+  const limit = parseInt(req.query.limit as string) || 10;
 
   const start = (page - 1) * limit;
   const end = start + limit;
