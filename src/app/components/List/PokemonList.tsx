@@ -13,7 +13,7 @@ interface PokemonListProps {
 const PokemonList = ({ list }: PokemonListProps) => {
   const isLoading = false;
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
+  const itemsPerPage = 20;
   const totalPages = Math.ceil(list.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
