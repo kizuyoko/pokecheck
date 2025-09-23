@@ -7,7 +7,7 @@ const Menu = () => {
       <MenuItem
         href='/pokemon'
         text='Pokémon'
-        imageSize={26}
+        imageSize={24}
         iconSrc='/pokeball.svg' 
       />
       <MenuItem
