@@ -11,6 +11,12 @@ const Menu = () => {
         iconSrc='/pokeball.svg'
       />
       <MenuItem
+        href='/pokemon'
+        text='Pokémon'
+        imageSize={24}
+        iconSrc='/pokeball.svg'
+      />
+      <MenuItem
         href='/type'
         text='Type'
         imageSize={22}
