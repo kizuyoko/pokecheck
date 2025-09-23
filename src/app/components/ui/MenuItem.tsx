@@ -37,7 +37,6 @@ const MenuItem = ({ text, href, iconSrc, isFavorite, imageSize }: PropType) => {
               aria-hidden="true"
               width={imageSize}
               height={imageSize}
-              className="transition-transform"
             />
           ) : null
         }
