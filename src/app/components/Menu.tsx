@@ -11,10 +11,10 @@ const Menu = () => {
         iconSrc='/pokeball.svg'
       />
       <MenuItem
-        href='/pokemon'
-        text='Pokémon'
-        imageSize={24}
-        iconSrc='/pokeball.svg'
+        href='/type'
+        text='Type'
+        imageSize={22}
+        iconSrc='/water.png' 
       />
       <MenuItem
         href='/favorites'
