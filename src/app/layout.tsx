@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bungee, Baloo_2 } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 import ClientProviders from "./components/ClientProviders";
 import Header from "./components/Header";
@@ -46,7 +47,27 @@ export default function RootLayout({
 }>) {
 
   return (
-    <html lang="en">    
+    <html lang="en">
+      <head>
+        {/* -- Google tag (gtag.js) */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-HF3S7S873D"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="ga-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-HF3S7S873D');
+            `,
+          }}
+        />
+      </head>    
       <body
         className={`flex flex-col min-h-screen ${bungee.variable} ${baloo2.variable} antialiased`}
       > <ClientProviders>
