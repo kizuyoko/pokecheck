@@ -63,12 +63,17 @@ export default function SearchBar({
         onSubmit={handleSubmit}
         role="form"
       >
+        <label htmlFor="search-input" className="sr-only">Search</label>
         <input
+          id="search-input" 
           type="text"
           placeholder={placeholder}
           className={`flex grow focus:outline-none ${classNameText}`}
           value={query}
           onChange={handleInputChange}
+          aria-label="Search"
+          autoComplete="off"
+          disabled={isLoading}
         />
         <button 
           type="submit" 
