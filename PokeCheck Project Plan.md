@@ -83,7 +83,7 @@
 (Branch: feature/express-api)
 - [X] Setup **Express.js** server
 - [X] Connect server to PokéAPI
-- [ ] Performance Improvement after connecting Express
+- [X] Performance Improvement after connecting Express
 
 ### Accessibility
 (Branch: feature/accessibility)
