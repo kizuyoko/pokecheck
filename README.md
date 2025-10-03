@@ -61,6 +61,10 @@ npm test
 ```sh
 npm run storybook
 ```
+### Running Server
+```sh
+npx ts-node server/src/index.ts
+```
 
 ## API Integration
 Data is retrieved from the [PokéAPI](https://pokeapi.co).
