@@ -87,7 +87,7 @@
 
 ### Accessibility
 (Branch: feature/accessibility)
-- [ ] Run **WAVE accessibility** checks
+- [X] Run **WAVE accessibility** checks
 
 ### Testing
 (Branch: feature/cypress)
