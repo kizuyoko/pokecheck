@@ -74,6 +74,7 @@ export default function SearchBar({
           aria-label="Search"
           autoComplete="off"
           disabled={isLoading}
+          data-testid="search-input"
         />
         <button 
           type="submit" 
