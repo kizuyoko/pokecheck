@@ -57,6 +57,20 @@ The app will be available at `http://localhost:3000`.
 ```sh
 npm test
 ```
+### Cypress Test (End-to-End Tests)
+You need Cypress installed. 
+This opens the Cypress Test Runner.
+
+```sh
+npx cypress open
+```
+Then select the browser and test file you want to run.
+
+If you prefer running tests headlessly (without the UI), use:
+```sh
+npx cypress run
+```
+
 ### Running Storybook
 ```sh
 npm run storybook
@@ -65,6 +79,8 @@ npm run storybook
 ```sh
 npx ts-node server/src/index.ts
 ```
+
+
 
 ## API Integration
 Data is retrieved from the [PokéAPI](https://pokeapi.co).
