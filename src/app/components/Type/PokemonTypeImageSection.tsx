@@ -9,7 +9,7 @@ const PokemonTypeImageSection = ({ type }: { type: string }) => {
         width={200}
         height={200}
         priority={true}
-        className='p-4'
+        className={`p-4${type === "dark" ? " dark:filter dark:invert" : ""}`}
       />
       <figcaption className="sr-only">{type}</figcaption>
     </figure>
