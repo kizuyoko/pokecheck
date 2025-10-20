@@ -91,11 +91,11 @@
 
 ### Testing
 (Branch: feature/cypress)
-- [ ] Write **Cypress end-to-end** tests
+- [X] Write **Cypress end-to-end** tests
 
 ### CI/CD - Git
 (Branch: feature/gitHub-actions)
-  - [ ] Setup **GitHub Actions** for automated testing and deployment
+- [ ] Setup **GitHub Actions** for automated testing and deployment
 
 ### Documentation enhancement
 (Branch: feature/documentation)
