@@ -27,6 +27,7 @@ const imageSrc = isFavorite
       onClick={() => dispatch(toggleFavorite(name))}
       className={`cursor-pointer w-10 h-10 flex items-center justify-center ${classsNameButton}`}
       aria-label="Toggle favorite"
+      data-testid={`favorite-button-${name}`}
     >
       <Image 
         src={imageSrc}
