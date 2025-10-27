@@ -29,8 +29,9 @@ jobs:
         run: npm run lint
 
       - name: Run Cypress tests
-        run: npx start-server-and-test start http://localhost:3000 "npx cypress run --headless --browser chrome"
-        env:
-          DISPLAY: ":99"
+        uses: cypress-io/github-action@v5
+        with:
+          browser: chrome
+          headless: true
 
   
