@@ -95,7 +95,7 @@
 - [X] Write Search test
 - [X] Write favorite test
 
-### CI/CD - Git
+### CI/CD - GitHub Actions
 (Branch: feature/gitHub-actions)
 - [ ] Setup **GitHub Actions** for automated testing and deployment
 - [ ] Add workflow file `.github/workflows/ci.yml`
