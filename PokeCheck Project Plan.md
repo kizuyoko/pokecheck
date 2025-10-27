@@ -91,11 +91,16 @@
 
 ### Testing
 (Branch: feature/cypress)
-- [X] Write **Cypress end-to-end** tests
+- [X] Start up Cypress
+- [X] Write Search test
+- [X] Write favorite test
 
 ### CI/CD - Git
 (Branch: feature/gitHub-actions)
 - [ ] Setup **GitHub Actions** for automated testing and deployment
+- [ ] Add workflow file `.github/workflows/ci.yml`
+- [ ] Run Cypress tests on push/pull_request
+- [ ] (Optional) Deploy to Vercel automatically
 
 ### Documentation enhancement
 (Branch: feature/documentation)
