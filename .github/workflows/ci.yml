@@ -18,6 +18,7 @@ jobs:
         
       - name: Install dependencies
         run: npm install  
+        working-directory: .
 
       - name: Run ESLint
         run: npm run lint
