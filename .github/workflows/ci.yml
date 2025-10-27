@@ -29,6 +29,6 @@ jobs:
         run: npm run lint
 
       - name: Run Cypress tests
-        run: npx start-server-and-test start http://localhost:3000 cypress:run
+        run: npx start-server-and-test start http://localhost:3000 "npx cypress run"
 
   
