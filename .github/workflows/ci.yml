@@ -26,6 +26,6 @@ jobs:
         run: npm run lint
 
       - name: Run Cypress tests
-        uses: cypress-io/github-action@v5
+        run: npx start-server-and-test start http://localhost:3000 cypress:run
 
   
