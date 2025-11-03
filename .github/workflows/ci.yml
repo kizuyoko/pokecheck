@@ -28,10 +28,9 @@ jobs:
       - name: Run ESLint
         run: npm run lint
 
-      - name: Run Cypress tests
-        uses: cypress-io/github-action@v5
+      - name: Cypress tests
+        uses: cypress-io/github-action@v6
         with:
-          browser: chrome
-          headless: true
-
+          build: npm run build
+          start: npm start
   
