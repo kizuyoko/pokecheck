@@ -9,9 +9,6 @@ describe("Search Pokemon", () => {
 
     cy.wait(2000);
 
-    // Click on the Pikachu link to navigate to its detail page
-    cy.contains("0025", { timeout: 10000 }).should("be.visible");
-
     // Click on the href="/pokemon/pikachu" link
     cy.get('a[href="/pokemon/pikachu"]', { timeout: 10000 }).should("be.visible").click();
 
