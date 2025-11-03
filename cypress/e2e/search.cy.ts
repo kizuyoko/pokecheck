@@ -1,6 +1,8 @@
 describe("Search Pokemon", () => {
   it("searches for Pikachu and shows result", () => {
     cy.visit("http://localhost:3000");
+
+    cy.wait(2000);
     
     cy.get('[data-testid="search-input"]', { timeout: 10000 }).should("be.visible")
       .type("Pikachu{enter}");
@@ -17,6 +19,8 @@ describe("Search Pokemon", () => {
 
   it("shows no results for a non-existent Pokemon", () => {
     cy.visit("http://localhost:3000");
+
+    cy.wait(2000);
 
     cy.get('[data-testid="search-input"]', { timeout: 10000 }).should("be.visible")
       .type("NonExistentPokemon{enter}");
