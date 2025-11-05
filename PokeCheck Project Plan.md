@@ -102,7 +102,7 @@
 - [X] Add EsLint to GitHub Actions
 - [X] Resolve Jest conflicts caused by Cypress installation
 - [X] Adjust Cypress setup after resolving Jest conflicts
-- [ ] Integrate Jest tests into GitHub Actions workflow
+- [X] Integrate Jest tests into GitHub Actions workflow
 - [ ] Integrate Cypress tests into GitHub Actions workflow
 - [X] Automatic deployment to Vercel via GitHub Actions
 
