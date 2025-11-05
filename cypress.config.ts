@@ -6,5 +6,6 @@ export default defineConfig({
     },
     baseUrl: "http://localhost:3000",
     pageLoadTimeout: 120000, 
+    tsConfigFile: 'tsconfig.cypress.json'
   },
 });
