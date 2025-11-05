@@ -27,7 +27,7 @@ export default function Home() {
         />
       )}
       <Title className="sm:mt-8">
-        Featured Pokémon
+        Featured Pokémons
       </Title>
       <PokemonListHome list={randomPokemonList} />
       <Title className="sm:mt-8">
