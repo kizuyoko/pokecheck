@@ -97,7 +97,7 @@
 
 ### CI/CD - GitHub Actions
 (Branch: feature/gitHub-actions)
-- [X] Setup **GitHub Actions** for automated testing and deployment
+- [X] Setup GitHub Actions for automated testing and deployment
 - [X] Add workflow file `.github/workflows/ci.yml`
 - [X] Add EsLint to GitHub Actions
 - [X] Resolve Jest conflicts caused by Cypress installation
@@ -105,7 +105,11 @@
 - [X] Integrate Jest tests into GitHub Actions workflow
 - [X] Integrate Cypress tests into GitHub Actions workflow
 - [X] Automatic deployment to Vercel via GitHub Actions
-- [X]
+- [X] **Optimization:** 
+  - Parallel execution of Lint, Jest, and Cypress jobs to reduce overall CI runtime  
+  - Caching of `node_modules` to speed up dependency installation  
+  - Cypress runs on a pre-built Next.js app to avoid redundant builds  
+  - Use of `npm ci` for reproducible and faster installs
 
 ### Documentation enhancement
 (Branch: feature/documentation)
