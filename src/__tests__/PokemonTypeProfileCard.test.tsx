@@ -2,11 +2,14 @@ import { render, screen } from '@/test-utils';
 import PokemonTypeProfileCard from '@/app/components/Type/PokemonTypeProfileCard';
 import { pokemonTypeExample } from '@/data/pokemonTypeExample';
 
+/* eslint-disable @next/next/no-img-element */
 jest.mock('next/image', () => ({
   __esModule: true,
-  default: (props: React.ImgHTMLAttributes<HTMLImageElement>) => {
-    // eslint-disable-next-line @next/next/no-img-element
-    return <img alt={props.alt || 'Image'} {...props} />;
+  default: (props: React.ImgHTMLAttributes<HTMLImageElement> & { priority?: boolean }) => {
+    // Destructure to omit 'priority' without assigning a new variable
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { priority, ...rest } = props;
+    return <img {...rest} alt={props.alt || ''} />;
   },
 }));
 
