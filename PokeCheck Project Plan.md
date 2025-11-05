@@ -105,6 +105,7 @@
 - [X] Integrate Jest tests into GitHub Actions workflow
 - [X] Integrate Cypress tests into GitHub Actions workflow
 - [X] Automatic deployment to Vercel via GitHub Actions
+- [X]
 
 ### Documentation enhancement
 (Branch: feature/documentation)

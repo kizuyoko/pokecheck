@@ -7,36 +7,46 @@ on:
     branches: [master]
 
 jobs:
-  tests:
+  lint:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: '20'
-        
-      - name: Install dependencies
-        run: npm install  
-
-      - name: Build Next.js app
-        run: npm run build  
-
-      - name: Run ESLint
-        run: npm run lint
-
-      - name: Run Jest tests
-        run: npm test -- --ci
-
-      - name: Run Cypress tests
-        uses: cypress-io/github-action@v6
+      - uses: actions/cache@v3
         with:
-          build: npm run build
+          path: |
+            ~/.npm
+            node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - run: npm ci
+      - run: npm run lint
+
+  test-and-e2e:
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ~/.npm
+            node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - run: npm ci
+      - run: npm run build
+      - run: npm test -- --ci
+      - uses: cypress-io/github-action@v6
+        with:
           start: npm start
           wait-on: 'http://localhost:3000'
           wait-on-timeout: 120
           browser: chrome
-  
