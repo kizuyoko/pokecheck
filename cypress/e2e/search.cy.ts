@@ -1,5 +1,5 @@
 describe("Search Pokemon", () => {
-  it("searches for Pikachu and shows result", () => {
+  it("searches for Pecharunt and shows result", () => {
     cy.visit("http://localhost:3000");
 
     cy.get('[data-testid="search-input"]', { timeout: 10000 }).should('be.visible');
