@@ -3,7 +3,7 @@
 exports[`PokemonProfileCard matches the snapshot 1`] = `
 <DocumentFragment>
   <article
-    class="w-full card text-left flex flex-col md:flex-row md:items-start gap-x-12"
+    class="w-full card text-left flex flex-col md:flex-row md:items-start gap-x-12 relative"
   >
     <div
       class="items-center flex justify-center"
@@ -85,6 +85,7 @@ exports[`PokemonProfileCard matches the snapshot 1`] = `
                 >
                   <img
                     alt="grass"
+                    class=""
                     height="32"
                     loading="lazy"
                     src="/type_icons/grass.svg"
@@ -104,6 +105,7 @@ exports[`PokemonProfileCard matches the snapshot 1`] = `
                 >
                   <img
                     alt="poison"
+                    class=""
                     height="32"
                     loading="lazy"
                     src="/type_icons/poison.svg"
@@ -207,6 +209,19 @@ exports[`PokemonProfileCard matches the snapshot 1`] = `
         </div>
       </div>
     </div>
+    <button
+      aria-label="Toggle favorite"
+      class="cursor-pointer w-10 h-10 flex items-center justify-center absolute right-4 top-4"
+      data-testid="favorite-button-bulbasaur"
+    >
+      <img
+        alt="Not favorite yet"
+        class="transform transition-transform duration-300 hover:scale-115 z-50 undefined"
+        height="28"
+        src="/heart_empty.svg"
+        width="28"
+      />
+    </button>
   </article>
 </DocumentFragment>
 `;

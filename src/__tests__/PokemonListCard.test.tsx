@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen } from '@/test-utils';
 import '@testing-library/jest-dom';
 import PokemonListCard from '@/app/components/List/PokemonListCard';
 import pokemonList from '@/data/pokemonList'; 

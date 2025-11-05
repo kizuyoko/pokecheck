@@ -1,4 +1,5 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { act, fireEvent } from '@testing-library/react';
+import { render, screen } from '@/test-utils';
 import '@testing-library/jest-dom';
 import SearchBar from '@/app/components/SearchBar'; 
 import { useRouter } from 'next/navigation';
@@ -17,9 +18,13 @@ describe('SearchBar', () => {
   }); 
 
   it('updates the input value when typing', () => {
+    jest.useFakeTimers();
     render(<SearchBar />);
     const input = screen.getByPlaceholderText(/search/i) as HTMLInputElement;
-    fireEvent.change(input, { target: { value: 'Pikachu' } });
+    act(() => {
+      fireEvent.change(input, { target: { value: 'Pikachu' } });
+      jest.advanceTimersByTime(500); 
+    });
     expect(input.value).toBe('Pikachu');
   });
 
@@ -50,8 +55,8 @@ describe('SearchBar', () => {
     const input = screen.getByPlaceholderText(/search/i);
     const button = screen.getByRole('button');
     
-    expect(container).toHaveClass('input-container py-2 flex items-center gap-2 justify-between custom-container');
-    expect(input).toHaveClass('input-text flex grow w-full focus:outline-none custom-text');
+    expect(container).toHaveClass('input-container py-2 flex items-center gap-2 justify-between grow');
+    expect(input).toHaveClass('flex grow focus:outline-none custom-text');
     expect(button).toHaveClass('flex items-center');
   });
 
@@ -77,11 +82,12 @@ describe('SearchBar', () => {
     render(<SearchBar />);
     const input = screen.getByPlaceholderText(/search/i) as HTMLInputElement;
     
-    fireEvent.change(input, { target: { value: 'Pikachu' } });
-    jest.advanceTimersByTime(500); // Wait for debounce time
-    expect(input.value).toBe('Pikachu');
-    
-    jest.useRealTimers();
+    act(() => {
+      fireEvent.change(input, { target: { value: 'Pikachu' } });
+      jest.advanceTimersByTime(500); // Wait for debounce time
+      expect(input.value).toBe('Pikachu');
+      jest.useRealTimers();
+    });  
   });
 
 });

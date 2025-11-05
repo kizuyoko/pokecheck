@@ -97,16 +97,14 @@
 
 ### CI/CD - GitHub Actions
 (Branch: feature/gitHub-actions)
-- [ ] Setup **GitHub Actions** for automated testing and deployment
-- [ ] Add workflow file `.github/workflows/ci.yml`
-- [ ] Run Cypress tests on push/pull_request
-- [ ] (Optional) Deploy to Vercel automatically
+- [X] Setup **GitHub Actions** for automated testing and deployment
+- [X] Add workflow file `.github/workflows/ci.yml`
+- [X] Deploy to Vercel automatically
 
 ### Documentation enhancement
 (Branch: feature/documentation)
 - [ ] **Update Documentation** README and Planning
-- [ ] Review **Storybook** documentation
-- [ ] Add **inline code** comments where necessary
+- [ ] Update **Storybook** documentation
 
 ---
 

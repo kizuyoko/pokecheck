@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen } from '@/test-utils';
 import PokemonTypeProfileCard from '@/app/components/Type/PokemonTypeProfileCard';
 import { pokemonTypeExample } from '@/data/pokemonTypeExample';
 
