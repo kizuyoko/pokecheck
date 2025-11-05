@@ -108,7 +108,10 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: next-build
-          path: .next
+          path: next-artifact
+
+      - name: Move build to .next
+        run: mv next-artifact/* .next    
 
       - name: Run Cypress tests
         uses: cypress-io/github-action@v6
