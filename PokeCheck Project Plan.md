@@ -99,7 +99,12 @@
 (Branch: feature/gitHub-actions)
 - [X] Setup **GitHub Actions** for automated testing and deployment
 - [X] Add workflow file `.github/workflows/ci.yml`
-- [X] Deploy to Vercel automatically
+- [X] Add EsLint to GitHub Actions
+- [X] Resolve Jest conflicts caused by Cypress installation
+- [X] Adjust Cypress setup after resolving Jest conflicts
+- [ ] Integrate Jest tests into GitHub Actions workflow
+- [ ] Integrate Cypress tests into GitHub Actions workflow
+- [X] Automatic deployment to Vercel via GitHub Actions
 
 ### Documentation enhancement
 (Branch: feature/documentation)
