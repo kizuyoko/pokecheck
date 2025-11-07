@@ -4,7 +4,9 @@
 PokeCheck is a Pokémon matchup checker that allows users to search for Pokémon and check type effectiveness in battles. The app is designed to be fast, accessible, and user-friendly. For more details, see the [PokeCheck Project Plan](https://github.com/kizuyoko/pokecheck/blob/master/PokeCheck%20Project%20Plan.md).
 
 **Phase 3 is here!**  
-In this phase, PokeCheck connects to a dedicated Express.js server for API requests, enhancing performance and scalability. Accessibility has been further improved, and the app is tested end-to-end with Cypress to ensure a smooth user experience. Continuous Integration and Deployment (CI/CD) pipelines via GitHub Actions have also been set up to automate testing and deployment, keeping the project robust and reliable.
+In this phase, PokeCheck connects to a dedicated Express.js server for API requests, enhancing performance and scalability.  
+Accessibility has been further improved, and the app is tested end-to-end with Cypress to ensure a smooth user experience.  
+Continuous Integration and Deployment (CI/CD) pipelines via **GitHub Actions** have also been introduced, automating linting, testing, and deployment to Vercel for a robust and reliable workflow.
 
 **Achievement**
 - 100 points on Lighthouse performance for desktop and mobile (homepage & search page)
@@ -29,10 +31,13 @@ In this phase, PokeCheck connects to a dedicated Express.js server for API reque
 - **State Management**: Redux Toolkit
 - **API Requests**: Axios, TanStack Query
 - **Component Documentation**: Storybook
-- **Unit Testing**: Jest
-- **E2E Testing**: Cypress
 - **Performance Testing**: Lighthouse
-- **Version Control**: GitHub (Feature-based branching strategy)
+- **Unit Testing**: Jest  
+- **E2E Testing**: Cypress  
+- **Linting**: ESLint  
+- **Version Control**: GitHub (feature-based branching strategy)  
+- **CI**: GitHub Actions (Lint, Jest, and Cypress running in parallel)  
+- **CD**: Automatic deployment to Vercel upon successful completion
 
 ## Getting Started
 
