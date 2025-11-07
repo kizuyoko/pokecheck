@@ -113,7 +113,7 @@
 
 ### Documentation enhancement
 (Branch: feature/documentation)
-- [ ] **Update Documentation** README and Planning
+- [X] **Update Documentation** README and Planning
 - [ ] Update **Storybook** documentation
 
 ---
