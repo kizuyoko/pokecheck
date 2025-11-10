@@ -114,7 +114,7 @@
 ### Documentation enhancement
 (Branch: feature/documentation)
 - [X] **Update Documentation** README and Planning
-- [ ] Update **Storybook** documentation
+- [X] Update **Storybook** documentation after Express.js
 
 ---
 

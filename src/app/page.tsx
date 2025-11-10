@@ -8,10 +8,13 @@ import { getRandomPokemons } from "./components/util/display";
 import SkeltonSearchBar from "./components/skelton/SkeltonSearchBar";
 import PokemonTypeList from "./components/Type/PokemonTypeList";
 import { usePokemons } from "@/lib/hooks/usePokemons";
+import { usePokemonTypes } from "@/lib/hooks/usePokemonTypes";
 
 export default function Home() {
   const { data: pokemons = [], isLoading } = usePokemons();
   const randomPokemonList = getRandomPokemons(4, pokemons);
+
+  const { data: types = [], isLoading: isLoadingTypes, error: errorTypes } = usePokemonTypes();
 
   return (
     <section className="py-8 flex flex-col items-center gap-6 text-center">
@@ -33,7 +36,11 @@ export default function Home() {
       <Title className="sm:mt-8">
         Pokémon Types
       </Title>
-      <PokemonTypeList />
+      <PokemonTypeList 
+        types={types}
+        isLoading={isLoadingTypes}
+        error={errorTypes}
+      />
     </section>
   );
 }
