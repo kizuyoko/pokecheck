@@ -1,11 +1,10 @@
 'use client'
-
 import { typeToDisplay } from "../util/display";
 import TypeIcon from "../ui/TypeIcon";
-import { usePokemonTypes } from '@/lib/hooks/usePokemonTypes';
+import { PokemonTypeData } from "@/types/pokemon";
 
-const PokemonTypeList = () => {
-  const { data: types = [], isLoading, error } = usePokemonTypes();
+
+const PokemonTypeList = ({ types, isLoading, error }: { types: PokemonTypeData[], isLoading: boolean, error: unknown }) => {
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error loading types</div>;
