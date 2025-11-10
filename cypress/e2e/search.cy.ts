@@ -1,3 +1,4 @@
+/// <reference types="cypress" />
 describe("Search Pokemon", () => {
   it("searches for Pecharunt and shows result", () => {
     cy.visit("http://localhost:3000");
